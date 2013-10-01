@@ -5,7 +5,7 @@
 	<title>Document</title>
 	<link rel="stylesheet" href="assets/stylesheets/screen.css">
 </head>
-<body>
+<body class="home">
 	<header>
 		<div class="logo">
 			<span class="icon-house" arial-hidden="true"></span>
@@ -15,11 +15,13 @@
 				<ul>
 					<li><a href="#">The Roof</a>
 						<ul id="categories">
+							<li class="filter" data-filter="all"><a href="#">All</a> | <a href="#" id="list-trigger">List</a> | <a href="#" id="grid-trigger">Grid</a></li>
 							<li class="filter" data-filter="living-room"><a href="#">Living Room</a></li>
 							<li class="filter" data-filter="kitchen"><a href="#">Kitchen</a></li>
 							<li class="filter" data-filter="bedroom"><a href="#">Bedroom</a></li>
 							<li class="filter" data-filter="study"><a href="#">Study</a></li>
 							<li class="filter" data-filter="garden"><a href="#">Garden</a></li>
+							<li class="filter" data-filter="exterior"><a href="#">Exterior</a></li>
 						</ul>
 					</li>
 					<li><a href="#">The Guys</a></li>
@@ -41,12 +43,101 @@
 	</header>
 	<div id="content">
 		<ul id="Grid">
-			<li class="mix living-room"></li>
-			<li class="mix kitchen"></li>
-			<li class="mix bedroom"></li>
-			<li class="mix study"></li>
-			<li class="mix garden"></li>
+			<li class="mix living-room">
+				<h4>Lorem ipsum dolor sit amet</h4>
+				<img src="assets/images/house1.jpg" alt="">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, autem fugit quibusdam excepturi sapiente odio velit! In, facilis laboriosam sed placeat odio earum iure tenetur rerum quis eos fugit saepe!</p>
+			</li>
+			<li class="mix kitchen">
+				<h4>Lorem ipsum dolor sit amet</h4>
+				<img src="assets/images/house2.jpg" alt="">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, autem fugit quibusdam excepturi sapiente odio velit! In, facilis laboriosam sed placeat odio earum iure tenetur rerum quis eos fugit saepe!</p>
+			</li>
+			<li class="mix bedroom">
+				<h4>Lorem ipsum dolor sit amet</h4>
+				<img src="assets/images/house3.jpg" alt="">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, autem fugit quibusdam excepturi sapiente odio velit! In, facilis laboriosam sed placeat odio earum iure tenetur rerum quis eos fugit saepe!</p>
+			</li>
+			<li class="mix study">
+				<h4>Lorem ipsum dolor sit amet</h4>
+				<img src="assets/images/house4.jpg" alt="">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, autem fugit quibusdam excepturi sapiente odio velit! In, facilis laboriosam sed placeat odio earum iure tenetur rerum quis eos fugit saepe!</p>
+			</li>
+			<li class="mix garden">
+				<h4>Lorem ipsum dolor sit amet</h4>
+				<img src="assets/images/house3.jpg" alt="">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, autem fugit quibusdam excepturi sapiente odio velit! In, facilis laboriosam sed placeat odio earum iure tenetur rerum quis eos fugit saepe!</p>
+			</li>
+			<li class="mix exterior">
+				<h4>Lorem ipsum dolor sit amet</h4>
+				<img src="assets/images/house2.jpg" alt="">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, autem fugit quibusdam excepturi sapiente odio velit! In, facilis laboriosam sed placeat odio earum iure tenetur rerum quis eos fugit saepe!</p>
+			</li>
+			<li class="mix living-room">
+				<h4>Lorem ipsum dolor sit amet</h4>
+				<img src="assets/images/house1.jpg" alt="">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, autem fugit quibusdam excepturi sapiente odio velit! In, facilis laboriosam sed placeat odio earum iure tenetur rerum quis eos fugit saepe!</p>
+			</li>
+			<li class="mix kitchen">
+				<h4>Lorem ipsum dolor sit amet</h4>
+				<img src="assets/images/house2.jpg" alt="">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, autem fugit quibusdam excepturi sapiente odio velit! In, facilis laboriosam sed placeat odio earum iure tenetur rerum quis eos fugit saepe!</p>
+			</li>
+			<li class="mix bedroom">
+				<h4>Lorem ipsum dolor sit amet</h4>
+				<img src="assets/images/house3.jpg" alt="">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, autem fugit quibusdam excepturi sapiente odio velit! In, facilis laboriosam sed placeat odio earum iure tenetur rerum quis eos fugit saepe!</p>
+			</li>
+			<li class="mix study">
+				<h4>Lorem ipsum dolor sit amet</h4>
+				<img src="assets/images/house4.jpg" alt="">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, autem fugit quibusdam excepturi sapiente odio velit! In, facilis laboriosam sed placeat odio earum iure tenetur rerum quis eos fugit saepe!</p>
+			</li>
+			<li class="mix garden">
+				<h4>Lorem ipsum dolor sit amet</h4>
+				<img src="assets/images/house3.jpg" alt="">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, autem fugit quibusdam excepturi sapiente odio velit! In, facilis laboriosam sed placeat odio earum iure tenetur rerum quis eos fugit saepe!</p>
+			</li>
+			<li class="mix exterior">
+				<h4>Lorem ipsum dolor sit amet</h4>
+				<img src="assets/images/house2.jpg" alt="">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, autem fugit quibusdam excepturi sapiente odio velit! In, facilis laboriosam sed placeat odio earum iure tenetur rerum quis eos fugit saepe!</p>
+			</li>
+			<li class="mix living-room">
+				<h4>Lorem ipsum dolor sit amet</h4>
+				<img src="assets/images/house1.jpg" alt="">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, autem fugit quibusdam excepturi sapiente odio velit! In, facilis laboriosam sed placeat odio earum iure tenetur rerum quis eos fugit saepe!</p>
+			</li>
+			<li class="mix kitchen">
+				<h4>Lorem ipsum dolor sit amet</h4>
+				<img src="assets/images/house2.jpg" alt="">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, autem fugit quibusdam excepturi sapiente odio velit! In, facilis laboriosam sed placeat odio earum iure tenetur rerum quis eos fugit saepe!</p>
+			</li>
+			<li class="mix bedroom">
+				<h4>Lorem ipsum dolor sit amet</h4>
+				<img src="assets/images/house3.jpg" alt="">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, autem fugit quibusdam excepturi sapiente odio velit! In, facilis laboriosam sed placeat odio earum iure tenetur rerum quis eos fugit saepe!</p>
+			</li>
+			<li class="mix study">
+				<h4>Lorem ipsum dolor sit amet</h4>
+				<img src="assets/images/house4.jpg" alt="">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, autem fugit quibusdam excepturi sapiente odio velit! In, facilis laboriosam sed placeat odio earum iure tenetur rerum quis eos fugit saepe!</p>
+			</li>
+			<li class="mix garden">
+				<h4>Lorem ipsum dolor sit amet</h4>
+				<img src="assets/images/house3.jpg" alt="">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, autem fugit quibusdam excepturi sapiente odio velit! In, facilis laboriosam sed placeat odio earum iure tenetur rerum quis eos fugit saepe!</p>
+			</li>
+			<li class="mix exterior">
+				<h4>Lorem ipsum dolor sit amet</h4>
+				<img src="assets/images/house2.jpg" alt="">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, autem fugit quibusdam excepturi sapiente odio velit! In, facilis laboriosam sed placeat odio earum iure tenetur rerum quis eos fugit saepe!</p>
+			</li>
+			<li class="gap"></li>
 		</ul>
 	</div>
+	<script src="assets/js/jquery-2.0.3.min.js"></script>
+	<script src="assets/js/jquery.mixitup.min.js"></script>
+	<script src="assets/js/app.js"></script>
 </body>
 </html>

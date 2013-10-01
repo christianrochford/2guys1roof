@@ -1,6 +1,7 @@
 header{
 	width: 240px;
 	height: 100%;
+	float: left;
 	.logo{
 		background: $grey;
 		width: 240px;
@@ -13,7 +14,7 @@ header{
 			margin-left: 45px;
 		}
 		p{
-			color: #fff;
+			color: $grey;
 			text-transform: uppercase;
 			margin: -10px 0 0 100px;
 		}
@@ -66,10 +67,12 @@ header{
 					    -o-transition: all 300ms ease-in-out;
 					    transition: all 300ms ease-in-out;
 						li{
-							width: 100%;
+							width: 85%;
+							margin-left: 15%;
 							a{
+								display: inline;
 								font-size: 1em;
-								margin: 5px 0 0 20px;
+								margin: 0;
 								text-decoration: none;
 								&:before{
 									content: "";
@@ -111,7 +114,7 @@ header{
 						}
 					}
 					&:first-child:hover #categories {
-						height: 130px;
+						height: 150px;
 					}
 					&:last-child:hover .social-nav ul{
 						height: 120px;

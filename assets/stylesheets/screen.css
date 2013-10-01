@@ -3114,43 +3114,76 @@ a {
   a:hover, a:active, a:focus {
     color: #47cbff; }
 
+/* line 2, ../sass/_mixitup.scss */
+#Grid {
+  width: 100%;
+  text-align: justify;
+  font-size: 0.1px; }
+
+/* line 8, ../sass/_mixitup.scss */
+#Grid:after {
+  content: '';
+  display: inline-block;
+  width: 100%; }
+
+/* line 14, ../sass/_mixitup.scss */
+#Grid .mix {
+  display: none;
+  opacity: 0;
+  width: 200px;
+  height: 200px;
+  vertical-align: top;
+  margin-bottom: 20px;
+  background: #ccc;
+  color: #fff;
+  overflow: hidden;
+  font-size: 30px;
+  text-align: center;
+  line-height: 200px; }
+
+/* line 29, ../sass/_mixitup.scss */
+#Grid .gap {
+  display: inline-block;
+  width: 200px; }
+
 /* line 1, ../sass/_header.scss */
 header {
   width: 240px;
-  height: 100%; }
-  /* line 4, ../sass/_header.scss */
+  height: 100%;
+  float: left; }
+  /* line 5, ../sass/_header.scss */
   header .logo {
     background: #979795;
     width: 240px;
     height: 220px; }
-    /* line 8, ../sass/_header.scss */
+    /* line 9, ../sass/_header.scss */
     header .logo .icon-house {
       font-size: 12em;
       display: block;
       color: #fff;
       padding-top: 30px;
       margin-left: 45px; }
-    /* line 15, ../sass/_header.scss */
+    /* line 16, ../sass/_header.scss */
     header .logo p {
-      color: #fff;
+      color: #979795;
       text-transform: uppercase;
       margin: -10px 0 0 100px; }
-  /* line 21, ../sass/_header.scss */
+  /* line 22, ../sass/_header.scss */
   header #menus {
     width: 240px;
     height: 100%; }
-    /* line 24, ../sass/_header.scss */
+    /* line 25, ../sass/_header.scss */
     header #menus nav {
       width: 100%;
       margin-top: 54px; }
-      /* line 27, ../sass/_header.scss */
+      /* line 28, ../sass/_header.scss */
       header #menus nav ul {
         width: 100%;
         list-style-type: none; }
-        /* line 30, ../sass/_header.scss */
+        /* line 31, ../sass/_header.scss */
         header #menus nav ul li {
           margin-left: 15px; }
-          /* line 32, ../sass/_header.scss */
+          /* line 33, ../sass/_header.scss */
           header #menus nav ul li a {
             font-size: 2em;
             display: block;
@@ -3158,16 +3191,16 @@ header {
             text-transform: uppercase;
             text-decoration: none;
             margin: 20px 0 0 20px; }
-            /* line 39, ../sass/_header.scss */
+            /* line 40, ../sass/_header.scss */
             header #menus nav ul li a:hover, header #menus nav ul li a:active, header #menus nav ul li a:focus {
               color: #47cbff; }
-            /* line 42, ../sass/_header.scss */
+            /* line 43, ../sass/_header.scss */
             header #menus nav ul li a:hover:before, header #menus nav ul li a:active:before, header #menus nav ul li a:focus:before {
               transform: rotate(180deg);
               -ms-transform: rotate(180deg);
               -webkit-transform: rotate(180deg);
               margin-top: 0; }
-            /* line 48, ../sass/_header.scss */
+            /* line 49, ../sass/_header.scss */
             header #menus nav ul li a:before {
               content: "+";
               margin: -4px 10px 0 0;
@@ -3177,7 +3210,7 @@ header {
               -moz-transition: all 300ms ease-in-out;
               -o-transition: all 300ms ease-in-out;
               transition: all 300ms ease-in-out; }
-          /* line 59, ../sass/_header.scss */
+          /* line 60, ../sass/_header.scss */
           header #menus nav ul li #categories {
             width: 100%;
             height: 0;
@@ -3187,18 +3220,20 @@ header {
             -moz-transition: all 300ms ease-in-out;
             -o-transition: all 300ms ease-in-out;
             transition: all 300ms ease-in-out; }
-            /* line 68, ../sass/_header.scss */
+            /* line 69, ../sass/_header.scss */
             header #menus nav ul li #categories li {
-              width: 100%; }
-              /* line 70, ../sass/_header.scss */
+              width: 85%;
+              margin-left: 15%; }
+              /* line 72, ../sass/_header.scss */
               header #menus nav ul li #categories li a {
+                display: inline;
                 font-size: 1em;
-                margin: 5px 0 0 20px;
+                margin: 0;
                 text-decoration: none; }
-                /* line 74, ../sass/_header.scss */
+                /* line 77, ../sass/_header.scss */
                 header #menus nav ul li #categories li a:before {
                   content: ""; }
-          /* line 81, ../sass/_header.scss */
+          /* line 84, ../sass/_header.scss */
           header #menus nav ul li .social-nav ul {
             width: 100%;
             height: 0;
@@ -3208,14 +3243,14 @@ header {
             -moz-transition: all 300ms ease-in-out;
             -o-transition: all 300ms ease-in-out;
             transition: all 300ms ease-in-out; }
-            /* line 90, ../sass/_header.scss */
+            /* line 93, ../sass/_header.scss */
             header #menus nav ul li .social-nav ul li {
               width: 20%;
               float: left; }
-              /* line 93, ../sass/_header.scss */
+              /* line 96, ../sass/_header.scss */
               header #menus nav ul li .social-nav ul li a {
                 text-decoration: none; }
-                /* line 95, ../sass/_header.scss */
+                /* line 98, ../sass/_header.scss */
                 header #menus nav ul li .social-nav ul li a span {
                   color: #979795;
                   font-size: 4rem;
@@ -3223,15 +3258,21 @@ header {
                   -moz-transition: all 300ms ease-in-out;
                   -o-transition: all 300ms ease-in-out;
                   transition: all 300ms ease-in-out; }
-                  /* line 102, ../sass/_header.scss */
+                  /* line 105, ../sass/_header.scss */
                   header #menus nav ul li .social-nav ul li a span:hover, header #menus nav ul li .social-nav ul li a span:active, header #menus nav ul li .social-nav ul li a span:focus {
                     color: #47cbff; }
-                /* line 106, ../sass/_header.scss */
+                /* line 109, ../sass/_header.scss */
                 header #menus nav ul li .social-nav ul li a:before {
                   content: ""; }
-          /* line 113, ../sass/_header.scss */
-          header #menus nav ul li:first-child:hover #categories {
-            height: 130px; }
           /* line 116, ../sass/_header.scss */
+          header #menus nav ul li:first-child:hover #categories {
+            height: 150px; }
+          /* line 119, ../sass/_header.scss */
           header #menus nav ul li:last-child:hover .social-nav ul {
             height: 120px; }
+
+/* line 2, ../sass/_home.scss */
+.home #content {
+  float: left;
+  width: 60%;
+  margin: 20px; }
