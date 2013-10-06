@@ -14,7 +14,8 @@ window.onload = function() {
 			'icon-pinterest' : '&#xe004;',
 			'icon-tumblr' : '&#xe005;',
 			'icon-instagram' : '&#xe000;',
-			'icon-house' : '&#xe006;'
+			'icon-house' : '&#xe006;',
+			'icon-cube' : '&#xe007;'
 		},
 		els = document.getElementsByTagName('*'),
 		i, attr, c, el;

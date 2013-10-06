@@ -1,35 +1,86 @@
 header{
-	width: 240px;
+	width: 250px;
 	height: 100%;
 	float: left;
+	position: fixed;
+	z-index: 999;
+	background: #fff;
+	top: 0;
+	@include breakpoint(tablet){
+		width: 100%;
+		height: auto;
+		float: none;
+		overflow: hidden;
+	}
+	@include breakpoint(mobile-landscape){
+		overflow: visible;
+	}
 	.logo{
 		background: $grey;
-		width: 240px;
+		width: 230px;
 		height: 220px;
+		margin: 20px 0 0 20px;
+		@include breakpoint(tablet){
+			width: 20%;
+			height: 100px;
+			float: left;
+			margin: 0; 
+			text-align: center; 
+		}
+		@include breakpoint(mobile-landscape){
+			height: 80px;
+		}
 		.icon-house{
 			font-size: 12em;
 			display: block;
 			color: #fff;
 			padding-top: 30px;
 			margin-left: 45px;
-		}
-		p{
-			color: $grey;
-			text-transform: uppercase;
-			margin: -10px 0 0 100px;
+			@include breakpoint(tablet){
+				padding-top: 15px;
+				margin-left: 0;
+				font-size: 5em;
+			}
+			@include breakpoint(mobile-landscape){
+				padding-top: 20px;
+				font-size: 3em;			
+			}
 		}
 	}
 	#menus{
-		width: 240px;
+		width: 250px;
 		height: 100%;
+		@include breakpoint(tablet){
+			width: 80%;
+			height: 100px;
+			float: left;
+			overflow: hidden;
+			}
+		@include breakpoint(mobile-landscape){
+			height: 80px;
+			float: left;
+			overflow: visible;
+		}
 		nav{
 			width: 100%;
 			margin-top: 54px;
+			@include breakpoint(tablet){
+				margin-top: 0;
+			}
 			ul{
 				width: 100%;
 				list-style-type: none;
+				@include breakpoint (mobile-landscape){
+
+					margin: 0;
+				}
 				li{
 					margin-left: 15px;
+					@include breakpoint(tablet){
+						margin-left: 0;
+						width: 25%;
+						float: left;
+					}
 					a{
 						font-size: 2em;
 						display: block;
@@ -37,6 +88,15 @@ header{
 						text-transform: uppercase;
 						text-decoration: none;
 						margin: 20px 0 0 20px;
+						@include breakpoint(tablet){
+							font-size: 1em;
+							margin-left: 0;
+							text-align: center; 
+						}
+						@include breakpoint (mobile-landscape){
+							height: 60px;
+							margin: 20px 0 0 0; 
+						}
 						&:hover, &:active, &:focus{
 						    color: $blue;
 						}
@@ -55,6 +115,12 @@ header{
 						    -moz-transition: all 300ms ease-in-out;
 						    -o-transition: all 300ms ease-in-out;
 						    transition: all 300ms ease-in-out;
+						    @include breakpoint(tablet){
+								display: none;
+							}
+							@include breakpoint(mobile-landscape-landscape){
+								left: 1%;
+							}
 						}
 					}
 					#categories{
@@ -66,23 +132,83 @@ header{
 					    -moz-transition: all 300ms ease-in-out;
 					    -o-transition: all 300ms ease-in-out;
 					    transition: all 300ms ease-in-out;
+					    @include breakpoint(tablet){
+					    	background: #fff;
+					    }
+					    @include breakpoint (mobile-landscape){
+					    	position: absolute;
+					    	left: 0;
+					    }
 						li{
 							width: 85%;
 							margin-left: 15%;
+							@include breakpoint(tablet){
+								width: 15.666%;
+								float: left;
+								margin: 0;
+								text-align: center; 
+							}
+							@include breakpoint(mobile-landscape){
+								width: 16.666%;
+								display: table;
+								position: relative;
+							}
 							a{
 								display: inline;
 								font-size: 1em;
 								margin: 0;
 								text-decoration: none;
+								-webkit-transition: all 300ms ease-in-out;
+					   			-moz-transition: all 300ms ease-in-out;
+					    		-o-transition: all 300ms ease-in-out;
+					   			transition: all 300ms ease-in-out;
+					   			transition-delay: 300ms;
+					   			-webkit-transition-delay: 300ms;
+								@include breakpoint(tablet){
+									font-size: 0.6em;
+								}
+								@include breakpoint(mobile-landscape){
+									display: table-cell;
+									text-align: center;
+									vertical-align: middle;
+									height: 40px;
+								}									
 								&:before{
 									content: "";
 								}
 							}
+							&:first-child{
+								@include breakpoint(tablet){
+									width: 95%;
+									text-align: center;
+								}
+								@include breakpoint(mobile-landscape){
+									display: none;
+								}
+								a{
+									@include breakpoint(mobile-landscape){
+										display: inline;
+									}
+								}
+							}
 						}
 					}
+					#categories.open{
+						height: 50px;
+						opacity: 1;
+						-ms-filter: 'progid: DXImageTransform.Microsoft.Alpha(Opacity=100)';
+						-ms-filter: 'progid: DXImageTransform.Microsoft.Alpha(Opacity=100)';
+					}
 					.social-nav{
+						@include breakpoint(tablet){
+							background: #fff;
+							position: absolute;
+							left: 20%;
+						}
+						@include breakpoint(mobile-landscape){
+							left: 0;
+						}
 						ul{
-							width: 100%;
 							height: 0;
 							list-style-type: none;
 							overflow: hidden;
@@ -91,17 +217,31 @@ header{
 						    -o-transition: all 300ms ease-in-out;
 						    transition: all 300ms ease-in-out;
 							li{
-								width: 20%;
+								width: 15%;
+								margin-left: 5px;
 								float: left;
+								@include breakpoint(tablet){
+									width: 18%;
+								}
 								a{
 									text-decoration: none;
+									@include breakpoint(mobile-landscape){
+										height: 50px;
+										margin-top: 10px;
+									}
 									span{
 										color: $grey;
-										font-size: 4rem;
+										font-size: 3rem;
 										-webkit-transition: all 300ms ease-in-out;
 									    -moz-transition: all 300ms ease-in-out;
 									    -o-transition: all 300ms ease-in-out;
 									    transition: all 300ms ease-in-out;
+									    @include breakpoint(tablet){
+											opacity: 0;
+											-ms-filter: 'progid: DXImageTransform.Microsoft.Alpha(Opacity=0)';
+											-ms-filter: 'progid: DXImageTransform.Microsoft.Alpha(Opacity=0)';
+											font-size: 2em;
+										}
 										&:hover, &:active, &:focus{
 									    	color: $blue;
 									    }
@@ -112,12 +252,12 @@ header{
 								}
 							}
 						}
-					}
-					&:first-child:hover #categories {
-						height: 150px;
-					}
-					&:last-child:hover .social-nav ul{
-						height: 120px;
+						ul.open{
+							height: 50px;
+							span{
+								opacity: 1;
+							}
+						}
 					}
 				}
 			}

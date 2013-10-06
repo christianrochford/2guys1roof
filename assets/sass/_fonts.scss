@@ -69,7 +69,7 @@ Instead of a list of all class selectors,
 you can use the generic selector below, but it's slower:
 [class*="icon-"] {
 */
-.icon-envelope, .icon-search, .icon-twitter, .icon-facebook, .icon-googleplus, .icon-pinterest, .icon-tumblr, .icon-instagram, .icon-house {
+.icon-envelope, .icon-search, .icon-twitter, .icon-facebook, .icon-googleplus, .icon-pinterest, .icon-tumblr, .icon-instagram, .icon-house, .icon-cube {
 	font-family: 'icomoon';
 	speak: none;
 	font-style: normal;
@@ -105,4 +105,7 @@ you can use the generic selector below, but it's slower:
 }
 .icon-house:before {
 	content: "\e006";
+}
+.icon-cube:before {
+	content: "\e007";
 }
