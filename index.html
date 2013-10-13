@@ -4,16 +4,17 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<link rel="stylesheet" href="assets/stylesheets/screen.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body class="home">
+<body id="home">
 	<header>
 		<div class="logo">
-			<span class="icon-house" arial-hidden="true"></span>
+			<a href="index.html"><span class="icon-house" arial-hidden="true"></span></a>
 		</div>
 		<div id="menus">
 			<nav>
 				<ul>
-					<li><a href="#">The Roof</a>
+					<li><a href="#" id="roof">The Roof</a>
 						<ul id="categories">
 							<li class="filter" data-filter="all"><a href="#">All</a> | <a href="#" id="list-trigger">List</a> | <a href="#" id="grid-trigger">Grid</a></li>
 							<li class="filter" data-filter="living-room"><a href="#">Living Room</a></li>
@@ -24,9 +25,9 @@
 							<li class="filter" data-filter="exterior"><a href="#">Exterior</a></li>
 						</ul>
 					</li>
-					<li><a href="#">The Guys</a></li>
-					<li><a href="#">The Place</a></li>
-					<li><a href="#">Be Social</a>
+					<li><a href="#" class="no-sub">The Guys</a></li>
+					<li><a href="#" class="no-sub">The Place</a></li>
+					<li><a href="#" id="social">Be Social</a>
 						<div class="social-nav">
 							<ul>
 								<li><a href="#"><span class="icon-facebook" arial-hidden="true"></span></a></li>
@@ -42,91 +43,148 @@
 		</div>
 	</header>
 
-	<div class="spacer"></div>
-
-	<div id="content">
-		<ul id="Grid">
-			<li class="mix living-room">
-				<div class="mix-content">
-					<div class="overbox">
-						<div class="text-wrap">
-							<h4>Lorem ipsum dolor sit amet</h4><span class="icon-cube" arial-hidden="true"></span>
-						</div>
-					</div>
-					<img src="assets/images/house1.jpg" alt="">
-					<div class="par-wrap">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, autem fugit quibusdam excepturi sapiente odio velit! In, facilis laboriosam sed placeat odio earum iure tenetur rerum quis eos fugit saepe!</p>
-					</div>
-				</div>
-			</li>
+	<div class="wrapper">
+		<ul id="rooms" class="just">
 			<li class="mix kitchen">
-				<div class="mix-content">
-					<div class="overbox">
-						<div class="text-wrap">
-							<h4>Lorem ipsum dolor sit amet</h4><span class="icon-cube" arial-hidden="true"></span>
-						</div>
+				<div class="overbox">
+					<div class="text-wrap">
+						<h4>Post Title</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, vero accusantium quo in natus dolorum nobis animi voluptas temporibus voluptate? Repudiandae, consectetur, voluptatibus perspiciatis enim itaque obcaecati ab sed similique.</p>
 					</div>
-					<img src="assets/images/house1.jpg" alt="">
-					<div class="par-wrap">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, autem fugit quibusdam excepturi sapiente odio velit! In, facilis laboriosam sed placeat odio earum iure tenetur rerum quis eos fugit saepe!</p>
-					</div>
-				</div>
-			</li>
-			<li class="mix bedroom">
-				<div class="mix-content">
-					<div class="overbox">
-						<div class="text-wrap">
-							<h4>Lorem ipsum dolor sit amet</h4><span class="icon-cube" arial-hidden="true"></span>
-						</div>
-					</div>
-					<img src="assets/images/house1.jpg" alt="">
-					<div class="par-wrap">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, autem fugit quibusdam excepturi sapiente odio velit! In, facilis laboriosam sed placeat odio earum iure tenetur rerum quis eos fugit saepe!</p>
+					<div class="icon-wrap">
+						<span class="icon-cube post-icon" aria-hidden="true"></span>
 					</div>
 				</div>
 			</li>
 			<li class="mix study">
-				<div class="mix-content">
-					<div class="overbox">
-						<div class="text-wrap">
-							<h4>Lorem ipsum dolor sit amet</h4><span class="icon-cube" arial-hidden="true"></span>
-						</div>
+				<div class="overbox">
+					<div class="text-wrap">
+						<h4>Post Title</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, vero accusantium quo in natus dolorum nobis animi voluptas temporibus voluptate? Repudiandae, consectetur, voluptatibus perspiciatis enim itaque obcaecati ab sed similique.</p>
 					</div>
-					<img src="assets/images/house1.jpg" alt="">
-					<div class="par-wrap">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, autem fugit quibusdam excepturi sapiente odio velit! In, facilis laboriosam sed placeat odio earum iure tenetur rerum quis eos fugit saepe!</p>
+					<div class="icon-wrap">
+						<span class="icon-cube post-icon" aria-hidden="true"></span>
 					</div>
 				</div>
 			</li>
 			<li class="mix garden">
-				<div class="mix-content">
-					<div class="overbox">
-						<div class="text-wrap">
-							<h4>Lorem ipsum dolor sit amet</h4><span class="icon-cube" arial-hidden="true"></span>
-						</div>
+				<div class="overbox">
+					<div class="text-wrap">
+						<h4>Post Title</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, vero accusantium quo in natus dolorum nobis animi voluptas temporibus voluptate? Repudiandae, consectetur, voluptatibus perspiciatis enim itaque obcaecati ab sed similique.</p>
 					</div>
-					<img src="assets/images/house1.jpg" alt="">
-					<div class="par-wrap">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, autem fugit quibusdam excepturi sapiente odio velit! In, facilis laboriosam sed placeat odio earum iure tenetur rerum quis eos fugit saepe!</p>
+					<div class="icon-wrap">
+						<span class="icon-cube post-icon" aria-hidden="true"></span>
 					</div>
 				</div>
 			</li>
-			<li class="mix exterior">
-				<div class="mix-content">
-					<div class="overbox">
-						<div class="text-wrap">
-							<h4>Lorem ipsum dolor sit amet</h4><span class="icon-cube" arial-hidden="true"></span>
-						</div>
+			<li class="mix living-room">
+				<div class="overbox">
+					<div class="text-wrap">
+						<h4>Post Title</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, vero accusantium quo in natus dolorum nobis animi voluptas temporibus voluptate? Repudiandae, consectetur, voluptatibus perspiciatis enim itaque obcaecati ab sed similique.</p>
 					</div>
-					<img src="assets/images/house1.jpg" alt="">
-					<div class="par-wrap">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, autem fugit quibusdam excepturi sapiente odio velit! In, facilis laboriosam sed placeat odio earum iure tenetur rerum quis eos fugit saepe!</p>
+					<div class="icon-wrap">
+						<span class="icon-cube post-icon" aria-hidden="true"></span>
+					</div>
+				</div>
+			</li>
+			<li class="mix bedroom">
+				<div class="overbox">
+					<div class="text-wrap">
+						<h4>Post Title</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, vero accusantium quo in natus dolorum nobis animi voluptas temporibus voluptate? Repudiandae, consectetur, voluptatibus perspiciatis enim itaque obcaecati ab sed similique.</p>
+					</div>
+					<div class="icon-wrap">
+						<span class="icon-cube post-icon" aria-hidden="true"></span>
+					</div>
+				</div>
+			</li>
+			<li class="mix bathroom">
+				<div class="overbox">
+					<div class="text-wrap">
+						<h4>Post Title</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, vero accusantium quo in natus dolorum nobis animi voluptas temporibus voluptate? Repudiandae, consectetur, voluptatibus perspiciatis enim itaque obcaecati ab sed similique.</p>
+					</div>
+					<div class="icon-wrap">
+						<span class="icon-cube post-icon" aria-hidden="true"></span>
+					</div>
+				</div>
+			</li>
+			<li class="mix kitchen">
+				<div class="overbox">
+					<div class="text-wrap">
+						<h4>Post Title</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, vero accusantium quo in natus dolorum nobis animi voluptas temporibus voluptate? Repudiandae, consectetur, voluptatibus perspiciatis enim itaque obcaecati ab sed similique.</p>
+					</div>
+					<div class="icon-wrap">
+						<span class="icon-cube post-icon" aria-hidden="true"></span>
+					</div>
+				</div>
+			</li>
+			<li class="mix study">
+				<div class="overbox">
+					<div class="text-wrap">
+						<h4>Post Title</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, vero accusantium quo in natus dolorum nobis animi voluptas temporibus voluptate? Repudiandae, consectetur, voluptatibus perspiciatis enim itaque obcaecati ab sed similique.</p>
+					</div>
+					<div class="icon-wrap">
+						<span class="icon-cube post-icon" aria-hidden="true"></span>
+					</div>
+				</div>
+			</li>
+			<li class="mix garden">
+				<div class="overbox">
+					<div class="text-wrap">
+						<h4>Post Title</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, vero accusantium quo in natus dolorum nobis animi voluptas temporibus voluptate? Repudiandae, consectetur, voluptatibus perspiciatis enim itaque obcaecati ab sed similique.</p>
+					</div>
+					<div class="icon-wrap">
+						<span class="icon-cube post-icon" aria-hidden="true"></span>
+					</div>
+				</div>
+			</li>
+			<li class="mix living-room">
+				<div class="overbox">
+					<div class="text-wrap">
+						<h4>Post Title</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, vero accusantium quo in natus dolorum nobis animi voluptas temporibus voluptate? Repudiandae, consectetur, voluptatibus perspiciatis enim itaque obcaecati ab sed similique.</p>
+					</div>
+					<div class="icon-wrap">
+						<span class="icon-cube post-icon" aria-hidden="true"></span>
+					</div>
+				</div>
+			</li>
+			<li class="mix bedroom">
+				<div class="overbox">
+					<div class="text-wrap">
+						<h4>Post Title</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, vero accusantium quo in natus dolorum nobis animi voluptas temporibus voluptate? Repudiandae, consectetur, voluptatibus perspiciatis enim itaque obcaecati ab sed similique.</p>
+					</div>
+					<div class="icon-wrap">
+						<span class="icon-cube post-icon" aria-hidden="true"></span>
+					</div>
+				</div>
+			</li>
+			<li class="mix bathroom">
+				<div class="overbox">
+					<div class="text-wrap">
+						<h4>Post Title</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, vero accusantium quo in natus dolorum nobis animi voluptas temporibus voluptate? Repudiandae, consectetur, voluptatibus perspiciatis enim itaque obcaecati ab sed similique.</p>
+					</div>
+					<div class="icon-wrap">
+						<span class="icon-cube post-icon" aria-hidden="true"></span>
 					</div>
 				</div>
 			</li>
 			<li class="gap"></li>
+			<li class="gap"></li>
+			<li class="gap"></li>
+			<li class="gap"></li>
+			<li class="gap"></li>
 		</ul>
 	</div>
+
 	<script src="assets/js/jquery-2.0.3.min.js"></script>
 	<script src="assets/js/jquery.mixitup.min.js"></script>
 	<script src="assets/js/app.js"></script>

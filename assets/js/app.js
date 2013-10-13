@@ -1,63 +1,48 @@
 // Tablet Menu
 
-$(document).ready(function(){
+menuFunction = function(){
 	if($(window).width() > 480){
-		$('nav li:first-child, nav li:last-child').hover(
+		$('a#roof').click(
 			function(){
-				$('nav ul').stop().animate({marginBottom: '0'});
+				$('.social-nav span').removeClass('on');
+				$('.social-nav ul').hide();
+				$('#categories').slideToggle(500);
+				$('#categories').toggleClass('on');
 			}
-		)
-		$('nav li:first-child').hover(
+		);
+		$('a#social').click(
 			function(){
-				$('#categories').stop().animate({height: '150px'});
+				$('#categories').removeClass('on');
+				$('#categories').hide();
+				$('.social-nav ul').slideToggle(500);
+				$('.social-nav span').toggleClass('on');
 			}
-		)
-		$('nav li:last-child').hover(
-			function(){
-				$('.social-nav ul').stop().animate({height: '120px'});
-				$('.social-nav a span').stop().animate({opacity: '1'});
-			}
-		)
-		$('nav').on('mouseleave', function(){
-			$('nav ul').stop().animate({marginBottom: '17px'});
-			$('#categories').stop().animate({height: '0'});
-			$('.social-nav a span').stop().animate({opacity: '0'});
-			$('.social-nav ul').stop().animate({height: '0'});
-		});
+		);
 	} else {
-		$('nav li:first-child').click(
-			function(){
-				if($('.social-nav ul').hasClass('open')){
-					$('.home #content').stop().animate({top: '0'});
-					$('.social-nav ul').stop().removeClass('open');
-					$('.home #content').stop().animate({top: '30px'});
-					$('#categories').stop().toggleClass('open');
-				} else if($('#categories').hasClass('open')){
-					$('.home #content').stop().animate({top: '0'});
-					$('#categories').stop().toggleClass('open');
+			$('a#roof').click(function(){
+				if($('.social-nav ul').hasClass('down')){
+					$('.social-nav span').removeClass('on');
+					$('.social-nav ul').removeClass('down');
+					$('#categories').toggleClass('down');
 				} else {
-					$('.social-nav ul').stop().removeClass('open');
-					$('.home #content').stop().animate({top: '30px'});
-					$('#categories').stop().toggleClass('open');
+					$('.social-nav span').removeClass('on');
+					$('.social-nav ul').removeClass('down');
+					$('#categories').toggleClass('down');
+					$('.wrapper').toggleClass('down');
 				}
 			});
-		$('nav li:last-child').click(
-			function(){
-				if($('#categories').hasClass('open')){
-					$('.home #content').stop().animate({top: '0'});
-					$('#categories').stop().removeClass('open');
-					$('.home #content').stop().animate({top: '30px'});
-					$('.social-nav ul').stop().toggleClass('open');
-				} else if($('.social-nav ul').hasClass('open')){
-					$('.home #content').stop().animate({top: '0'});
-					$('.social-nav ul').stop().toggleClass('open');
-				} 
-				else {
-					$('#categories').stop().removeClass('open');
-					$('.home #content').stop().animate({top: '30px'});
-					$('.social-nav ul').stop().toggleClass('open');
+			$('a#social').click(function(){
+				if($('#categories').hasClass('down')){
+					$('#categories').removeClass('down');
+					$('.social-nav ul').toggleClass('down');
+					$('.social-nav span').toggleClass('on');
+				} else {
+					$('#categories').removeClass('down');
+					$('.social-nav ul').toggleClass('down');
+					$('.social-nav span').toggleClass('on');
+					$('.wrapper').toggleClass('down');
 				}
-			});
+			});	
 	}
 	if($(window).width() < 769 && $(window).width() >480){
 		$('#categories').css({width:$(window).width() * 80/100});
@@ -66,9 +51,12 @@ $(document).ready(function(){
 		$('#categories').css({width: $('header').width()});
 		$('.social-nav').css({width: $('header').width()});
 	}
-});
+}
+
+$(document).ready(menuFunction());
 
 $(window).resize(function(){
+
 	if($(window).width() < 768 && $(window).width() >480){
 		$('#categories').css({width:$(window).width() * 80/100});
 		$('.social-nav').css({width:$(window).width() * 80/100});
@@ -76,62 +64,41 @@ $(window).resize(function(){
 		$('#categories').css({width: $('header').width()});
 		$('.social-nav').css({width: $('header').width()});
 	}
-	if($(window).width() > 480){
-		$('nav li:first-child').click(
-			function(){
-					$('.social-nav ul').removeClass('open');
-					$('.home #content').css({top: '0'});
-					$('#categories').removeClass('open');
-			});
-		$('nav li:last-child').click(
-			function(){
-					$('#categories').removeClass('open');
-					$('.home #content').css({top: '0'});
-					$('.social-nav ul').removeClass('open');
-			});
+	if($(window).width() >480){
+		$('#categories').removeClass('down');
+		$('.social-nav ul').removeClass('down');
+		$('.wrapper').removeClass('down');
 	}
-
 });
 
 // Initialize MixItUp
 
 $(document).ready(function(){
 	$(function(){
-	    $('#Grid').mixitup();  
+		$('#rooms').mixitup({
+			effects: ['fade','scale'],
+			multiFilter: true,
+			showOnLoad: 'kitchen bedroom bathroom garden living-room study',
+		    easing: 'smooth',
+		    layoutMode: 'grid',
+		    targetDisplayGrid: 'inline-block',
+		    targetDisplayList: 'block',
+		    transitionSpeed: 600,
+		    resizeContainer: true,
+		    minHeight: 0,
+		    perspectiveDistance: '3000',
+		    perspectiveOrigin: '50% 50%',
+		    animateGridList: true
+		});
 	});
 	$('#list-trigger').click(function(e){
 		e.preventDefault();
-		$('#Grid').mixitup('toList');
-		$('#Grid .mix').addClass('list');
-		$('.overbox').addClass('list');
-		$('.par-wrap').addClass('list');
+		$('#rooms').mixitup('toList');
+		$('#rooms .mix').addClass('list');
 	});
 	$('#grid-trigger').click(function(e){
 		e.preventDefault();
-		$('#Grid').mixitup('toGrid');
-		$('.overbox').removeClass('list');
-		$('#Grid .mix').removeClass('list');
-		('.par-wrap').removeClass('list');
+		$('#rooms').mixitup('toGrid');
+		$('#rooms .mix').removeClass('list');
 	});
-})
-
-// Post hover
-
-$(document).ready(function(){
-	$('.mix').hover(
-		function(){
-			$(this).find('.icon-cube').stop().animate({'font-size':'1em'}, 500);
-			$(this).find('.overbox').stop().animate({opacity: '1'});
-			$(this).find('.overbox.list').stop().animate({opacity: '1'});
-		},
-		function(){
-			$(this).find('.icon-cube').animate({'font-size':'0'});
-			$(this).find('.overbox').stop().animate({opacity: '0'});
-			$('.overbox.list').stop().animate({opacity: '1'});
-		}
-	);
-});
-
-$(window).resize(function(){
-	$('#Grid .mix').css({height: $('#Grid .mix').width()});
 });

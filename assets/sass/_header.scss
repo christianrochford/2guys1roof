@@ -34,8 +34,8 @@ header{
 			font-size: 12em;
 			display: block;
 			color: #fff;
-			padding-top: 30px;
-			margin-left: 45px;
+			padding-top: 28px;
+			margin-left: 40px;
 			@include breakpoint(tablet){
 				padding-top: 15px;
 				margin-left: 0;
@@ -70,9 +70,14 @@ header{
 			ul{
 				width: 100%;
 				list-style-type: none;
+				@include breakpoint (tablet){
+					margin-left: 10px;
+				}
 				@include breakpoint (mobile-landscape){
-
-					margin: 0;
+					margin-left: 5px;
+				}
+				@include breakpoint (mobile){
+					margin-left: 0;
 				}
 				li{
 					margin-left: 15px;
@@ -82,6 +87,7 @@ header{
 						float: left;
 					}
 					a{
+
 						font-size: 2em;
 						display: block;
 						color: $grey;
@@ -94,21 +100,21 @@ header{
 							text-align: center; 
 						}
 						@include breakpoint (mobile-landscape){
-							height: 60px;
+							height: 43px;
 							margin: 20px 0 0 0; 
 						}
-						&:hover, &:active, &:focus{
+						&:hover, &:focus{
 						    color: $blue;
 						}
-						&:hover:before, &:active:before, &:focus:before{
+						&:hover:before, &:focus:before{
 						    transform:rotate(180deg);
 							-ms-transform:rotate(180deg); 
 							-webkit-transform:rotate(180deg); 
-							margin-top: 0;
+							margin-top: -6px;
 						}
 						&:before{
 							content: "+";
-							margin: -4px 10px 0 0;
+							margin: 0 10px 0 0;
 							display: block;
 							float: left;
 							-webkit-transition: all 300ms ease-in-out;
@@ -125,19 +131,27 @@ header{
 					}
 					#categories{
 						width: 100%;
-						height: 0;
+						height: 150px;
+						display: none;
 						list-style-type: none;
 						overflow: hidden;
+						filter: opacity(0);
+						opacity: 0;
 						-webkit-transition: all 300ms ease-in-out;
 					    -moz-transition: all 300ms ease-in-out;
 					    -o-transition: all 300ms ease-in-out;
 					    transition: all 300ms ease-in-out;
 					    @include breakpoint(tablet){
+					    	height: 42px;
 					    	background: #fff;
 					    }
 					    @include breakpoint (mobile-landscape){
 					    	position: absolute;
 					    	left: 0;
+					    	filter: opacity(100);
+					    	opacity: 1;
+					    	display: block;
+					    	height: 0;
 					    }
 						li{
 							width: 85%;
@@ -150,6 +164,7 @@ header{
 							}
 							@include breakpoint(mobile-landscape){
 								width: 16.666%;
+								height: 60px;
 								display: table;
 								position: relative;
 							}
@@ -193,35 +208,48 @@ header{
 							}
 						}
 					}
-					#categories.open{
-						height: 50px;
+					#categories.on{
+						filter: opacity(100);
 						opacity: 1;
-						-ms-filter: 'progid: DXImageTransform.Microsoft.Alpha(Opacity=100)';
-						-ms-filter: 'progid: DXImageTransform.Microsoft.Alpha(Opacity=100)';
+					}
+					#categories.down{
+						height: 60px;
 					}
 					.social-nav{
 						@include breakpoint(tablet){
-							background: #fff;
 							position: absolute;
 							left: 20%;
 						}
 						@include breakpoint(mobile-landscape){
+							background: #fff;
 							left: 0;
 						}
 						ul{
-							height: 0;
+							height: 120px;
+							display: none;
 							list-style-type: none;
 							overflow: hidden;
 							-webkit-transition: all 300ms ease-in-out;
 						    -moz-transition: all 300ms ease-in-out;
 						    -o-transition: all 300ms ease-in-out;
 						    transition: all 300ms ease-in-out;
+						    @include breakpoint(tablet){
+								height: 60px;
+							}
+							@include breakpoint(mobile-landscape){
+								display: block;
+								height: 0;
+							}
 							li{
 								width: 15%;
 								margin-left: 5px;
 								float: left;
 								@include breakpoint(tablet){
 									width: 18%;
+									margin-top: -10px;
+								}
+								@include breakpoint(mobile-landscape){
+									margin-top: 5px;
 								}
 								a{
 									text-decoration: none;
@@ -232,19 +260,22 @@ header{
 									span{
 										color: $grey;
 										font-size: 3rem;
+										filter: opacity(0);
+										opacity: 0;
 										-webkit-transition: all 300ms ease-in-out;
 									    -moz-transition: all 300ms ease-in-out;
 									    -o-transition: all 300ms ease-in-out;
 									    transition: all 300ms ease-in-out;
 									    @include breakpoint(tablet){
-											opacity: 0;
-											-ms-filter: 'progid: DXImageTransform.Microsoft.Alpha(Opacity=0)';
-											-ms-filter: 'progid: DXImageTransform.Microsoft.Alpha(Opacity=0)';
 											font-size: 2em;
 										}
 										&:hover, &:active, &:focus{
 									    	color: $blue;
 									    }
+									}
+									span.on{
+										filter: opacity(100);
+										opacity: 1;
 									}
 									&:before{
 										content: "";
@@ -252,11 +283,8 @@ header{
 								}
 							}
 						}
-						ul.open{
-							height: 50px;
-							span{
-								opacity: 1;
-							}
+						ul.down{
+							height: 60px;
 						}
 					}
 				}
