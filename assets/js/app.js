@@ -102,3 +102,20 @@ $(document).ready(function(){
 		$('#rooms .mix').removeClass('list');
 	});
 });
+
+// Ajax call for article posts
+
+$(document).on('click', '.post-link',function(){
+	$.ajaxSetup({ cache: false });
+    $('#article-content').empty();
+    $('#article-content').load($(this).attr('post-title')+' #content','html');
+    $('#article-content').hide();
+    $('#article-content').delay(200).slideDown(500);
+});
+
+$(document).on('click', '#post-wrap .icon-cube', function(){
+	$('#article-content').slideUp(500);
+	$('#article-content').empty();
+})
+
+

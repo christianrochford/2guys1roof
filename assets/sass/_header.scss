@@ -13,10 +13,11 @@ header{
 		overflow: hidden;
 	}
 	@include breakpoint(mobile-landscape){
+		height: 60px;
 		overflow: visible;
 	}
 	.logo{
-		background: $grey;
+		background: $blue;
 		width: 230px;
 		height: 220px;
 		margin: 20px 0 0 20px;
@@ -28,7 +29,7 @@ header{
 			text-align: center; 
 		}
 		@include breakpoint(mobile-landscape){
-			height: 80px;
+			height: 60px;
 		}
 		.icon-house{
 			font-size: 12em;
@@ -42,7 +43,8 @@ header{
 				font-size: 5em;
 			}
 			@include breakpoint(mobile-landscape){
-				padding-top: 20px;
+				padding-top: 10px;
+				margin-left: 3px;
 				font-size: 3em;			
 			}
 		}
@@ -74,10 +76,11 @@ header{
 					margin-left: 10px;
 				}
 				@include breakpoint (mobile-landscape){
-					margin-left: 5px;
+					margin-left: 0;
 				}
 				@include breakpoint (mobile){
 					margin-left: 0;
+					margin-bottom: 0;
 				}
 				li{
 					margin-left: 15px;
@@ -87,8 +90,7 @@ header{
 						float: left;
 					}
 					a{
-
-						font-size: 2em;
+						font-size: 1.4em;
 						display: block;
 						color: $grey;
 						text-transform: uppercase;
@@ -100,8 +102,12 @@ header{
 							text-align: center; 
 						}
 						@include breakpoint (mobile-landscape){
-							height: 43px;
-							margin: 20px 0 0 0; 
+							height: 34px;
+							margin: 9px 0 0; 
+						}
+						@include breakpoint (mobile){
+							height: 42px;
+							margin: 9px 0; 
 						}
 						&:hover, &:focus{
 						    color: $blue;
@@ -124,9 +130,6 @@ header{
 						    @include breakpoint(tablet){
 								display: none;
 							}
-							@include breakpoint(mobile-landscape-landscape){
-								left: 1%;
-							}
 						}
 					}
 					#categories{
@@ -148,6 +151,7 @@ header{
 					    @include breakpoint (mobile-landscape){
 					    	position: absolute;
 					    	left: 0;
+					    	top: 60px;
 					    	filter: opacity(100);
 					    	opacity: 1;
 					    	display: block;
@@ -241,7 +245,7 @@ header{
 								height: 0;
 							}
 							li{
-								width: 15%;
+								width: 12%;
 								margin-left: 5px;
 								float: left;
 								@include breakpoint(tablet){
@@ -251,15 +255,21 @@ header{
 								@include breakpoint(mobile-landscape){
 									margin-top: 5px;
 								}
+								@include breakpoint(mobile){
+									margin-top: 0;
+								}
 								a{
 									text-decoration: none;
 									@include breakpoint(mobile-landscape){
 										height: 50px;
+										margin-top: 7px;
+									}
+									@include breakpoint(mobile){
 										margin-top: 10px;
 									}
 									span{
 										color: $grey;
-										font-size: 3rem;
+										font-size: 2.5rem;
 										filter: opacity(0);
 										opacity: 0;
 										-webkit-transition: all 300ms ease-in-out;
@@ -284,7 +294,7 @@ header{
 							}
 						}
 						ul.down{
-							height: 60px;
+							height: 50px;
 						}
 					}
 				}

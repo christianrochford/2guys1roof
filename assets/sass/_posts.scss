@@ -1,0 +1,44 @@
+#post-wrap{
+	margin-left: 270px;
+	@include breakpoint(tablet){
+		margin: 120px 5% 0;
+	}
+	.icon-cube{
+		color: $grey;
+		font-size: 2em;
+		position: absolute;
+		top: 20px;
+		right: 40px;
+		-webkit-transition: all 300ms ease-in-out;
+		-moz-transition: all 300ms ease-in-out;
+		-o-transition: all 300ms ease-in-out;
+		transition: all 300ms ease-in-out;
+		&:hover, &:focus, &:active{
+			cursor: pointer;
+			color: $blue;
+			font-size: 2.2em;
+		}
+	}
+	.slider{
+		width: 60%;
+		max-height: 360px;
+		margin: 20px 20%;
+		overflow: hidden;
+		img{
+			width: 100%;
+		}
+	}
+	.post-text-wrap{
+		h4{
+			color: $grey;
+			text-transform: uppercase;
+			text-align: center; 
+		}
+		p{
+			width: 100%;
+			margin: 20px 0;
+			color: $grey;
+			height: auto;
+		}
+	}
+}
