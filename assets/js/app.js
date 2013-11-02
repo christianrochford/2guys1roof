@@ -1,7 +1,9 @@
 // Tablet Menu
 
-menuFunction = function(){
-	if($(window).width() > 480){
+var menuFunction = function(){
+	if($(window).width() > 768){
+		$('#categories').css({width: $('header').width()});
+		$('.social-nav').css({width: $('header').width()});
 		$('a#roof').click(
 			function(){
 				$('.social-nav span').removeClass('on');
@@ -18,58 +20,43 @@ menuFunction = function(){
 				$('.social-nav span').toggleClass('on');
 			}
 		);
-	} else {
-			$('a#roof').click(function(){
-				if($('.social-nav ul').hasClass('down')){
-					$('.social-nav span').removeClass('on');
-					$('.social-nav ul').removeClass('down');
-					$('#categories').toggleClass('down');
-				} else {
-					$('.social-nav span').removeClass('on');
-					$('.social-nav ul').removeClass('down');
-					$('#categories').toggleClass('down');
-					$('.wrapper').toggleClass('down');
-				}
-			});
-			$('a#social').click(function(){
-				if($('#categories').hasClass('down')){
-					$('#categories').removeClass('down');
-					$('.social-nav ul').toggleClass('down');
-					$('.social-nav span').toggleClass('on');
-				} else {
-					$('#categories').removeClass('down');
-					$('.social-nav ul').toggleClass('down');
-					$('.social-nav span').toggleClass('on');
-					$('.wrapper').toggleClass('down');
-				}
-			});	
-	}
-	if($(window).width() < 769 && $(window).width() >480){
+	} else if($(window).width() > 480){
 		$('#categories').css({width:$(window).width() * 80/100});
 		$('.social-nav').css({width:$(window).width() * 80/100});
-	} else {
+		$('a#roof').click(
+			function(){
+				$('.social-nav span').removeClass('on');
+				$('.social-nav ul').hide();
+				$('#categories').slideToggle(500);
+				$('#categories').toggleClass('on');
+			}
+		);
+		$('a#social').click(
+			function(){
+				$('#categories').removeClass('on');
+				$('#categories').hide();
+				$('.social-nav ul').slideToggle(500);
+				$('.social-nav span').toggleClass('on');
+			}
+		);
+	} else if($(window).width() <= 480){
 		$('#categories').css({width: $('header').width()});
 		$('.social-nav').css({width: $('header').width()});
+		$('#categories').hide();
+		$('a#roof').click(function(){
+			$('#categories').hide();
+		});		
+		$('a#social').click(function(){
+			$('.social-nav ul').toggleClass('down');
+			$('.social-nav span').toggleClass('on');
+			$('#wrapper').toggleClass('down');
+		});	
 	}
 }
 
-$(document).ready(menuFunction());
+$(document).ready(menuFunction);
 
-$(window).resize(function(){
-
-	if($(window).width() < 768 && $(window).width() >480){
-		$('#categories').css({width:$(window).width() * 80/100});
-		$('.social-nav').css({width:$(window).width() * 80/100});
-	} else {
-		$('#categories').css({width: $('header').width()});
-		$('.social-nav').css({width: $('header').width()});
-	}
-	if($(window).width() >480){
-		$('#categories').removeClass('down');
-		$('.social-nav ul').removeClass('down');
-		$('.wrapper').removeClass('down');
-	}
-});
+$(window).resize(menuFunction);
 
 // Initialize MixItUp
 
@@ -77,8 +64,8 @@ $(document).ready(function(){
 	$(function(){
 		$('#rooms').mixitup({
 			effects: ['fade','scale'],
-			multiFilter: true,
-			showOnLoad: 'kitchen bedroom bathroom garden living-room study',
+			multiFilter: false,
+			showOnLoad: 'livingroom kitchen bathroom bedroom study garden exterior',
 		    easing: 'smooth',
 		    layoutMode: 'grid',
 		    targetDisplayGrid: 'inline-block',
@@ -95,12 +82,24 @@ $(document).ready(function(){
 		e.preventDefault();
 		$('#rooms').mixitup('toList');
 		$('#rooms .mix').addClass('list');
+		$('#article-content').slideUp(500);
+		$('#article-content').empty();
 	});
 	$('#grid-trigger').click(function(e){
 		e.preventDefault();
 		$('#rooms').mixitup('toGrid');
 		$('#rooms .mix').removeClass('list');
+		$('#article-content').slideUp(500);
+		$('#article-content').empty();
 	});
+});
+
+// Show titles
+
+$(document).ready(function(){
+	$('.mix').hover(function(){
+		$(this).toggleClass('on');
+	})
 });
 
 // Ajax call for article posts
@@ -108,14 +107,35 @@ $(document).ready(function(){
 $(document).on('click', '.post-link',function(){
 	$.ajaxSetup({ cache: false });
     $('#article-content').empty();
-    $('#article-content').load($(this).attr('post-title')+' #content','html');
+    $('#article-content').load($(this).attr('post-title')+' #content', function(){
+    	$('.flexslider').flexslider();
+    });
     $('#article-content').hide();
     $('#article-content').delay(200).slideDown(500);
 });
 
-$(document).on('click', '#post-wrap .icon-cube', function(){
+$(document).on('click', '#post-wrap .icon-close', function(){
 	$('#article-content').slideUp(500);
 	$('#article-content').empty();
 })
+
+// Initialize flexslider
+
+$(document).ready(function() {
+	$('.flexslider').flexslider();
+});
+
+// Set div size for guys images
+
+$(document).ready(function(){
+	$('#major').css({ width: $('#wrapper').width() * 0.7 - 20 });
+});
+
+$(window).resize(function(){
+	$('#major').css({ width: $('#wrapper').width() * 0.7 - 20 });
+})
+
+
+
 
 

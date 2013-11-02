@@ -1,10 +1,11 @@
 
-#home{
+.home, .guys, .place{
 	color: #f3f3f4;
 	font-family: 'Quicksand', sans-serif;
-		.wrapper{
-		margin: 20px 20px 0 270px;
+		#wrapper{
+			margin: 20px 20px 0 270px;
 			line-height: 0;
+			clear: both;
 			-webkit-transition: all 300ms ease-in-out;
 		    -moz-transition: all 300ms ease-in-out;
 		    -o-transition: all 300ms ease-in-out;
@@ -17,27 +18,28 @@
 			margin: 80px 0 0;
 		}
 	}
-	.wrapper.down{
-		margin: 120px 0 0;
+	#wrapper.down{
+		margin: 110px 0 0;
 	}
 }
-
-
-/* GRID LAYOUT */
 
 #rooms{
 	position: relative;
 	list-style-type: none;
 	text-align: justify;
 	font-size: 0;
+	clear: both;
 	.mix{
+		background-repeat: none !important;
+		background-position: 50% 50% !important;
+		background-size: cover !important;
 		display: none;
 		opacity: 0;
 		position: relative;
 		width: 32%;
 		padding-top: 32%;
 		margin-bottom: 2%;
-		background: #fff url(../images/house1.jpg);
+		background: #fff;
 		background-repeat: no-repeat;
 		background-position: 50% 50%;
 		background-size: cover;
@@ -53,9 +55,10 @@
 			margin-bottom: 2%;
 		}
 		@include breakpoint(mobile-landscape){
-			width: 100%;
-			padding-top: 100%;
+			width: 88%;
+			padding-top: 88%;
 			margin-bottom: 6%;
+			margin-left: 6%;
 		}
 		.overbox{
 			zoom: 1;
@@ -124,17 +127,17 @@
 				bottom: 25%;
 			}
 		}
-		&:hover, &:active, &:focus{
-			cursor: pointer;
-			.overbox{
-				zoom: 1;
-				filter: alpha(opacity=100);
-				opacity: 1;
-				.text-wrap{
-					top: 0;
-					height: 50%;
-					border-bottom: 1px solid $white;
-				}
+	}
+	.mix.on{
+		cursor: pointer;
+		.overbox{
+			zoom: 1;
+			filter: alpha(opacity=100);
+			opacity: 1;
+			.text-wrap{
+				top: 0;
+				height: 50%;
+				border-bottom: 1px solid $white;
 			}
 		}
 	}
@@ -142,12 +145,17 @@
 	.mix.list{
 		overflow: visible;
 		.overbox{
+				background: transparent;
 				filter: opacity(100);
 				opacity: 1;
 			.text-wrap{
 				top: 0;
 				left: 100%;
 				height: 30%;
+				-webkit-transition: all 300ms ease-in-out;
+			    -moz-transition: all 300ms ease-in-out;
+			    -o-transition: all 300ms ease-in-out;
+			    transition: all 300ms ease-in-out;
 				@include breakpoint(mobile-landscape){
 					top: 0;
 					left: 0;
@@ -160,6 +168,10 @@
 					font-size: 1.2em;
 					color: $grey;
 					text-align: left;
+					-webkit-transition: all 300ms ease-in-out;
+				    -moz-transition: all 300ms ease-in-out;
+				    -o-transition: all 300ms ease-in-out;
+				    transition: all 300ms ease-in-out;
 					@include breakpoint(mobile-landscape){
 						font-size: 2em;
 						color: #fff;
@@ -178,6 +190,10 @@
 					width: 200%;
 					max-height: 115px;
 					overflow: hidden;
+					-webkit-transition: all 300ms ease-in-out;
+				    -moz-transition: all 300ms ease-in-out;
+				    -o-transition: all 300ms ease-in-out;
+				    transition: all 300ms ease-in-out;
 					@include breakpoint(max-width, 960px){
 						width: 100%;
 					}
@@ -196,16 +212,18 @@
 				left: 0;
 				width: 100%;
 				height: 100%;
-				@include breakpoint(mobile-landscape){
-
-				}
 			}
 			.post-icon{
+				color: transparent;
 				display: table-cell;
 				text-align: center;
 				vertical-align: middle;
 				font-size: 5em;
 				bottom: 40%;
+				-webkit-transition: all 300ms ease-in-out;
+			    -moz-transition: all 300ms ease-in-out;
+			    -o-transition: all 300ms ease-in-out;
+			    transition: all 300ms ease-in-out;
 				@include breakpoint(tablet){
 					bottom: 30%;
 				}
@@ -214,6 +232,15 @@
 					font-size: 2em;
 					bottom: 25%;
 				}
+			}
+		}
+	}
+	.mix.list.on{
+		.overbox{
+			background: rgb(71,203,205);
+			background: rgba(71,203,205, 0.7);
+			.post-icon{
+				color: #fff;
 			}
 		}
 	}
@@ -231,22 +258,6 @@
 		@include breakpoint(mobile-landscape){
 			width: 100%;
 		}
-	}
-	.kitchen .overbox{
-	}
-	.living-room .overbox{
-	}
-	.bathroom .overbox{
-	}
-	.study .overbox{
-	}
-	.bedroom .overbox{
-	}
-	.study .overbox{
-	}
-	.garden .overbox{
-	}
-	.exterior .overbox{
 	}
 }
 

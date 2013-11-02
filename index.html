@@ -4,10 +4,10 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<link rel="stylesheet" href="assets/stylesheets/screen.css">
-	<script src="assets/javascripts/modernizr.js"></script>
+	<script src="assets/js/modernizr.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body id="home">
+<body class="home">
 	<header>
 		<div class="logo">
 			<a href="index.html"><span class="icon-house" arial-hidden="true"></span></a>
@@ -18,16 +18,17 @@
 					<li><a href="#" id="roof">The Roof</a>
 						<ul id="categories">
 							<li class="filter" data-filter="all"><a href="#">All</a> | <a href="#" id="list-trigger">List</a> | <a href="#" id="grid-trigger">Grid</a></li>
-							<li class="filter" data-filter="living-room"><a href="#">Living Room</a></li>
+							<li class="filter" data-filter="livingroom"><a href="#">Living Room</a></li>
 							<li class="filter" data-filter="kitchen"><a href="#">Kitchen</a></li>
+							<li class="filter" data-filter="bathroom"><a href="#">Bathroom</a></li>
 							<li class="filter" data-filter="bedroom"><a href="#">Bedroom</a></li>
 							<li class="filter" data-filter="study"><a href="#">Study</a></li>
 							<li class="filter" data-filter="garden"><a href="#">Garden</a></li>
 							<li class="filter" data-filter="exterior"><a href="#">Exterior</a></li>
 						</ul>
 					</li>
-					<li><a href="#" class="no-sub">The Guys</a></li>
-					<li><a href="#" class="no-sub">The Place</a></li>
+					<li><a href="theguys.html" class="no-sub">The Guys</a></li>
+					<li><a href="theplace.html" class="no-sub">The Place</a></li>
 					<li><a href="#" id="social">Be Social</a>
 						<div class="social-nav">
 							<ul>
@@ -44,11 +45,10 @@
 		</div>
 	</header>
 
-	<div id="article-content"></div>
-
-	<div class="wrapper">
+	<div id="wrapper">
+		<div id="article-content"></div>
 		<ul id="rooms" class="just">
-			<li class="mix kitchen">
+			<li class="mix kitchen" style="background:url('assets/images/kitchen/1.jpg');">
 				<div class="overbox post-link" post-title="posts.html">
 					<div class="text-wrap">
 						<h4>Post Title</h4>
@@ -59,7 +59,7 @@
 					</div>
 				</div>
 			</li>
-			<li class="mix study">
+			<li class="mix kitchen" style="background:url('assets/images/kitchen/2.jpg');">
 				<div class="overbox post-link" post-title="posts.html">
 					<div class="text-wrap">
 						<h4>Post Title</h4>
@@ -70,7 +70,7 @@
 					</div>
 				</div>
 			</li>
-			<li class="mix garden">
+			<li class="mix kitchen" style="background:url('assets/images/kitchen/6.jpg');">
 				<div class="overbox post-link" post-title="posts.html">
 					<div class="text-wrap">
 						<h4>Post Title</h4>
@@ -81,7 +81,7 @@
 					</div>
 				</div>
 			</li>
-			<li class="mix living-room">
+			<li class="mix kitchen" style="background:url('assets/images/kitchen/12.jpg');">
 				<div class="overbox post-link" post-title="posts.html">
 					<div class="text-wrap">
 						<h4>Post Title</h4>
@@ -92,7 +92,7 @@
 					</div>
 				</div>
 			</li>
-			<li class="mix bedroom">
+			<li class="mix bedroom" style="background:url('assets/images/bedroom/1.jpg');">
 				<div class="overbox post-link" post-title="posts.html">
 					<div class="text-wrap">
 						<h4>Post Title</h4>
@@ -103,7 +103,7 @@
 					</div>
 				</div>
 			</li>
-			<li class="mix bathroom">
+			<li class="mix bedroom" style="background:url('assets/images/bedroom/5.jpg');">
 				<div class="overbox post-link" post-title="posts.html">
 					<div class="text-wrap">
 						<h4>Post Title</h4>
@@ -114,7 +114,7 @@
 					</div>
 				</div>
 			</li>
-			<li class="mix kitchen">
+			<li class="mix exterior" style="background:url('assets/images/exterior/1.jpg');">
 				<div class="overbox post-link" post-title="posts.html">
 					<div class="text-wrap">
 						<h4>Post Title</h4>
@@ -125,7 +125,7 @@
 					</div>
 				</div>
 			</li>
-			<li class="mix study">
+			<li class="mix exterior" style="background:url('assets/images/exterior/2.jpg');">
 				<div class="overbox post-link" post-title="posts.html">
 					<div class="text-wrap">
 						<h4>Post Title</h4>
@@ -136,7 +136,7 @@
 					</div>
 				</div>
 			</li>
-			<li class="mix garden">
+			<li class="mix garden" style="background:url('assets/images/garden/5.jpg');">
 				<div class="overbox post-link" post-title="posts.html">
 					<div class="text-wrap">
 						<h4>Post Title</h4>
@@ -147,7 +147,7 @@
 					</div>
 				</div>
 			</li>
-			<li class="mix living-room">
+			<li class="mix bathroom" style="background:url('assets/images/bathroom/1.jpg');">
 				<div class="overbox post-link" post-title="posts.html">
 					<div class="text-wrap">
 						<h4>Post Title</h4>
@@ -158,7 +158,7 @@
 					</div>
 				</div>
 			</li>
-			<li class="mix bedroom">
+			<li class="mix bathroom" style="background:url('assets/images/bathroom/2.jpg');">
 				<div class="overbox post-link" post-title="posts.html">
 					<div class="text-wrap">
 						<h4>Post Title</h4>
@@ -169,7 +169,73 @@
 					</div>
 				</div>
 			</li>
-			<li class="mix bathroom">
+			<li class="mix livingroom" style="background:url('assets/images/living-room/4.jpg');">
+				<div class="overbox post-link" post-title="posts.html">
+					<div class="text-wrap">
+						<h4>Post Title</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, vero accusantium quo in natus dolorum nobis animi voluptas temporibus voluptate? Repudiandae, consectetur, voluptatibus perspiciatis enim itaque obcaecati ab sed similique.</p>
+					</div>
+					<div class="icon-wrap">
+						<span class="icon-cube post-icon" aria-hidden="true"></span>
+					</div>
+				</div>
+			</li>
+			<li class="mix livingroom" style="background:url('assets/images/living-room/5.jpg');">
+				<div class="overbox post-link" post-title="posts.html">
+					<div class="text-wrap">
+						<h4>Post Title</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, vero accusantium quo in natus dolorum nobis animi voluptas temporibus voluptate? Repudiandae, consectetur, voluptatibus perspiciatis enim itaque obcaecati ab sed similique.</p>
+					</div>
+					<div class="icon-wrap">
+						<span class="icon-cube post-icon" aria-hidden="true"></span>
+					</div>
+				</div>
+			</li>
+			<li class="mix livingroom" style="background:url('assets/images/living-room/9.jpg');">
+				<div class="overbox post-link" post-title="posts.html">
+					<div class="text-wrap">
+						<h4>Post Title</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, vero accusantium quo in natus dolorum nobis animi voluptas temporibus voluptate? Repudiandae, consectetur, voluptatibus perspiciatis enim itaque obcaecati ab sed similique.</p>
+					</div>
+					<div class="icon-wrap">
+						<span class="icon-cube post-icon" aria-hidden="true"></span>
+					</div>
+				</div>
+			</li>
+			<li class="mix livingroom" style="background:url('assets/images/living-room/10.jpg');">
+				<div class="overbox post-link" post-title="posts.html">
+					<div class="text-wrap">
+						<h4>Post Title</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, vero accusantium quo in natus dolorum nobis animi voluptas temporibus voluptate? Repudiandae, consectetur, voluptatibus perspiciatis enim itaque obcaecati ab sed similique.</p>
+					</div>
+					<div class="icon-wrap">
+						<span class="icon-cube post-icon" aria-hidden="true"></span>
+					</div>
+				</div>
+			</li>
+			<li class="mix study" style="background:url('assets/images/study/1.jpg');">
+				<div class="overbox post-link" post-title="posts.html">
+					<div class="text-wrap">
+						<h4>Post Title</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, vero accusantium quo in natus dolorum nobis animi voluptas temporibus voluptate? Repudiandae, consectetur, voluptatibus perspiciatis enim itaque obcaecati ab sed similique.</p>
+					</div>
+					<div class="icon-wrap">
+						<span class="icon-cube post-icon" aria-hidden="true"></span>
+					</div>
+				</div>
+			</li>
+			<li class="mix study" style="background:url('assets/images/study/2.jpg');">
+				<div class="overbox post-link" post-title="posts.html">
+					<div class="text-wrap">
+						<h4>Post Title</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, vero accusantium quo in natus dolorum nobis animi voluptas temporibus voluptate? Repudiandae, consectetur, voluptatibus perspiciatis enim itaque obcaecati ab sed similique.</p>
+					</div>
+					<div class="icon-wrap">
+						<span class="icon-cube post-icon" aria-hidden="true"></span>
+					</div>
+				</div>
+			</li>
+			<li class="mix study" style="background:url('assets/images/study/3.jpg');">
 				<div class="overbox post-link" post-title="posts.html">
 					<div class="text-wrap">
 						<h4>Post Title</h4>
@@ -189,7 +255,9 @@
 	</div>
 
 	<script src="assets/js/jquery-2.0.3.min.js"></script>
+	<script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
 	<script src="assets/js/jquery.mixitup.min.js"></script>
+	<script src="assets/js/jquery.flexslider.js"></script>
 	<script src="assets/js/app.js"></script>
 </body>
 </html>

@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="assets/stylesheets/screen.css">
+	<script src="assets/js/modernizr.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body class="place">
+	<header>
+		<div class="logo">
+			<a href="index.html"><span class="icon-house" arial-hidden="true"></span></a>
+		</div>
+		<div id="menus">
+			<nav>
+				<ul>
+					<li><a href="index.html" id="roof">The Roof</a></li>
+					<li><a href="theguys.html" class="no-sub">The Guys</a></li>
+					<li><a href="theplace.html" class="no-sub">The Place</a></li>
+					<li><a href="#" id="social">Be Social</a>
+						<div class="social-nav">
+							<ul>
+								<li><a href="#"><span class="icon-facebook" arial-hidden="true"></span></a></li>
+								<li><a href=""><span class="icon-twitter" arial-hidden="true"></span></a></li>
+								<li><a href=""><span class="icon-tumblr" arial-hidden="true"></span></a></li>
+								<li><a href=""><span class="icon-pinterest" arial-hidden="true"></span></a></li>
+								<li><a href=""><span class="icon-googleplus" arial-hidden="true"></span></a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	
+	<div id="wrapper">
+		<ul id="photos" class="instagram"></ul>
+	</div>
+
+	<script src="assets/js/jquery-2.0.3.min.js"></script>
+	<script src="assets/js/jquery.mixitup.min.js"></script>
+	<script src="assets/js/jquery.flexslider.js"></script>
+	<script src="assets/js/instagram.min.js"></script>
+	<script src="assets/js/app.js"></script>
+	<script>
+		// load Instagram gallery
+		$(document).ready(function() {
+			function createPhotoElement(photo) {
+		      var innerHtml = $('<img>')
+		        .addClass('instagram-image')
+		        .attr('src', photo.images.thumbnail.url);
+
+		      innerHtml = $('<a>')
+		        .attr('target', '_blank')
+		        .attr('href', photo.link)
+		        .append(innerHtml);
+
+		      return $('<li class="photo">')
+		        .addClass('instagram-placeholder')
+		        .attr('id', photo.id)
+		        .append(innerHtml);
+		    }
+
+		    function didLoadInstagram(event, response) {
+		      var that = this;
+		      $.each(response.data, function(i, photo) {
+		        $(that).append(createPhotoElement(photo));
+		      });
+		      $(that).append('<li class="gap"></li><li class="gap"></li><li class="gap"></li><li class="gap"></li><li class="gap"></li>');
+		    }
+			var clientId = '580fec389fe749af8271f95e1a5c026f';
+		    $('.instagram').on('didLoadInstagram', didLoadInstagram);
+		    $('.instagram').instagram({
+		    	hash: 'cafeand',
+		    	count: 20,
+		    	clientId: clientId
+		  	});
+		});
+	</script>
+</body>
+<html>
