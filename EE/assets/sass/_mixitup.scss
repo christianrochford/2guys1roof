@@ -1,0 +1,277 @@
+
+.home, .guys, .place, .posts{
+	color: #f3f3f4;
+	font-family: 'Quicksand', sans-serif;
+		#wrapper{
+			margin: 20px 20px 0 270px;
+			line-height: 0;
+			clear: both;
+			-webkit-transition: all 300ms ease-in-out;
+		    -moz-transition: all 300ms ease-in-out;
+		    -o-transition: all 300ms ease-in-out;
+		    transition: all 300ms ease-in-out;
+		@include breakpoint(tablet){
+			margin: 120px 20px 0 20px;
+		}
+		@include breakpoint(mobile-landscape){
+			width: 100%;
+			margin: 80px 0 0;
+		}
+	}
+	#wrapper.down{
+		margin: 110px 0 0;
+	}
+}
+
+#rooms{
+	position: relative;
+	list-style-type: none;
+	text-align: justify;
+	font-size: 0;
+	clear: both;
+	.mix{
+		background-repeat: none !important;
+		background-position: 50% 50% !important;
+		background-size: cover !important;
+		display: none;
+		opacity: 0;
+		position: relative;
+		width: 24%;
+		padding-top: 24%;
+		margin-bottom: 2%;
+		background: #fff;
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+		background-size: cover;
+		overflow: hidden;
+		@include breakpoint(widescreen){
+			width: 32%;
+			padding-top: 32%;
+			margin-bottom: 2%;
+		}
+		@include breakpoint(desktop){
+			width: 48.5%;
+			padding-top: 48.5%;
+			margin-bottom: 3%;
+		}
+		@include breakpoint(tablet){
+			width: 32%;
+			padding-top: 32%;
+			margin-bottom: 2%;
+		}
+		@include breakpoint(mobile-landscape){
+			width: 88%;
+			padding-top: 88%;
+			margin-bottom: 6%;
+			margin-left: 6%;
+		}
+		.overbox{
+			zoom: 1;
+			filter: alpha(opacity=0);
+			opacity: 0;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgb(71,203,205);
+			background: rgba(71,203,205, 0.7);
+			-webkit-transition: all 300ms ease-in-out;
+		    -moz-transition: all 300ms ease-in-out;
+		    -o-transition: all 300ms ease-in-out;
+		    transition: all 300ms ease-in-out;
+			.text-wrap{
+				position: absolute;
+				top: 50%;
+				height: 0;
+				margin: 0 10%;
+				width: 80%;
+				border-bottom: 1px solid transparent;
+				display: table;
+				-webkit-transition: all 300ms ease-in-out;
+				-moz-transition: all 300ms ease-in-out;
+				-o-transition: all 300ms ease-in-out;
+				transition: all 300ms ease-in-out;
+				a{
+					display: block;
+					font-size: 2em;
+					color: $white;
+					text-transform: uppercase;
+					display: table-cell;
+					text-align: center;
+					vertical-align: middle;
+					-webkit-transition: all 300ms ease-in-out;
+					-moz-transition: all 300ms ease-in-out;
+					-o-transition: all 300ms ease-in-out;
+					transition: all 300ms ease-in-out;
+					@include between-breakpoints(960px, 1100px){
+						font-size: 1.2em;
+					}
+					@include breakpoint(max-width, 868px){
+						font-size: 1.2em;
+					}
+					@include breakpoint(mobile-landscape){
+						font-size: 2em;
+					}
+					@include breakpoint(mobile){
+						font-size: 1.5em;
+					}
+				}
+				p{
+					color: $grey;
+					display: none;
+				}
+			}
+			.post-icon{
+				font-size: 2em;
+				font-weight: bold;
+				display: block;
+				width: 100%;
+				text-align: center; 
+				position: absolute;
+				bottom: 25%;
+			}
+		}
+	}
+	.mix.on{
+		cursor: pointer;
+		.overbox{
+			zoom: 1;
+			filter: alpha(opacity=100);
+			opacity: 1;
+			.text-wrap{
+				top: 0;
+				height: 50%;
+				border-bottom: 1px solid $white;
+			}
+		}
+	}
+
+	.mix.list{
+		overflow: visible;
+		.overbox{
+				background: transparent;
+				filter: opacity(100);
+				opacity: 1;
+			.text-wrap{
+				top: 0;
+				left: 100%;
+				height: 30%;
+				-webkit-transition: all 300ms ease-in-out;
+			    -moz-transition: all 300ms ease-in-out;
+			    -o-transition: all 300ms ease-in-out;
+			    transition: all 300ms ease-in-out;
+				@include breakpoint(mobile-landscape){
+					top: 0;
+					left: 0;
+					height: 50%;
+					margin: 0 10%;
+					width: 80%;
+					border-bottom: 1px solid $white;
+				}
+				h4{
+					font-size: 1.2em;
+					color: $grey;
+					text-align: left;
+					-webkit-transition: all 300ms ease-in-out;
+				    -moz-transition: all 300ms ease-in-out;
+				    -o-transition: all 300ms ease-in-out;
+				    transition: all 300ms ease-in-out;
+					@include breakpoint(mobile-landscape){
+						font-size: 2em;
+						color: #fff;
+						text-align: center;
+					}
+					@include breakpoint(mobile){
+						font-size: 1.5em;
+					}
+				}
+				p{
+					color: $grey;
+					display: block;
+					position: absolute;
+					top: 100%;
+					left: 0;
+					width: 200%;
+					max-height: 115px;
+					overflow: hidden;
+					-webkit-transition: all 300ms ease-in-out;
+				    -moz-transition: all 300ms ease-in-out;
+				    -o-transition: all 300ms ease-in-out;
+				    transition: all 300ms ease-in-out;
+					@include breakpoint(max-width, 960px){
+						width: 100%;
+					}
+					@include breakpoint(tablet){
+						width: 200%;
+					}
+					@include breakpoint(mobile-landscape){
+						display: none;
+					}
+				}
+			}
+			.icon-wrap{
+				display: table;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+			}
+			.post-icon{
+				color: transparent;
+				display: table-cell;
+				text-align: center;
+				vertical-align: middle;
+				font-size: 5em;
+				bottom: 40%;
+				-webkit-transition: all 300ms ease-in-out;
+			    -moz-transition: all 300ms ease-in-out;
+			    -o-transition: all 300ms ease-in-out;
+			    transition: all 300ms ease-in-out;
+				@include breakpoint(tablet){
+					bottom: 30%;
+				}
+				@include breakpoint(mobile-landscape){
+					display: block;
+					font-size: 2em;
+					bottom: 25%;
+				}
+			}
+		}
+	}
+	.mix.list.on{
+		.overbox{
+			background: rgb(71,203,205);
+			background: rgba(71,203,205, 0.7);
+			.post-icon{
+				color: #fff;
+			}
+		}
+	}
+
+	.gap{
+		display: inline-block;
+		width: 32%;
+		height: 0;
+		@include breakpoint(desktop){
+			width: 48.5%;
+		}
+		@include breakpoint(tablet){
+			width: 31.5%;
+		}
+		@include breakpoint(mobile-landscape){
+			width: 100%;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
