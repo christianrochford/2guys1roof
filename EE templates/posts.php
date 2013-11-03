@@ -2,7 +2,11 @@
 
 <body class="posts">
 
-<div id="content">
+{embed="base/_global_header"}
+
+<div id="wrapper">
+
+	<div id="content">
 		<div id="post-wrap">
 		{exp:channel:entries channel="article"}
 			<span class="icon-close" aria-hidden="true"></span>
@@ -22,6 +26,9 @@
 		{/exp:channel:entries}
 		</div>
 	</div>
+
+</div>
+
 	<script src="{site_url}assets/js/jquery-2.0.3.min.js"></script>
 	<script src="{site_url}assets/js/jquery-migrate-1.2.1.min.js"></script>
 	<script src="{site_url}assets/js/jquery.mixitup.min.js"></script>

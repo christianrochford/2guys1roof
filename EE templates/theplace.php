@@ -1,30 +1,8 @@
 {embed="base/_head"}
 
-<header>
-		<div class="logo">
-			<a href="index"><span class="icon-house" arial-hidden="true"></span></a>
-		</div>
-		<div id="menus">
-			<nav>
-				<ul>
-					<li><a href="index" id="roof">The Roof</a></li>
-					<li><a href="theGuys" class="no-sub">The Guys</a></li>
-					<li><a href="thePlace" class="no-sub">The Place</a></li>
-					<li><a href="#" id="social">Be Social</a>
-						<div class="social-nav">
-							<ul>
-								<li><a href="#"><span class="icon-facebook" arial-hidden="true"></span></a></li>
-								<li><a href=""><span class="icon-twitter" arial-hidden="true"></span></a></li>
-								<li><a href=""><span class="icon-tumblr" arial-hidden="true"></span></a></li>
-								<li><a href=""><span class="icon-pinterest" arial-hidden="true"></span></a></li>
-								<li><a href=""><span class="icon-googleplus" arial-hidden="true"></span></a></li>
-							</ul>
-						</div>
-					</li>
-				</ul>
-			</nav>
-		</div>
-	</header>
+<body class="place">
+
+{embed="base/_global_header"}
 
 <div id="wrapper">
 		<ul id="photos" class="instagram"></ul>
