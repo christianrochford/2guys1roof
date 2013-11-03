@@ -1,23 +1,15 @@
-<!doctype html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-	<link rel="stylesheet" href="assets/stylesheets/screen.css">
-	<script src="assets/js/modernizr.js"></script>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body class="place">
-	<header>
+{embed="base/_head"}
+
+<header>
 		<div class="logo">
-			<a href="index.html"><span class="icon-house" arial-hidden="true"></span></a>
+			<a href="index"><span class="icon-house" arial-hidden="true"></span></a>
 		</div>
 		<div id="menus">
 			<nav>
 				<ul>
-					<li><a href="index.html" id="roof">The Roof</a></li>
-					<li><a href="theguys.html" class="no-sub">The Guys</a></li>
-					<li><a href="theplace.html" class="no-sub">The Place</a></li>
+					<li><a href="index" id="roof">The Roof</a></li>
+					<li><a href="theGuys" class="no-sub">The Guys</a></li>
+					<li><a href="thePlace" class="no-sub">The Place</a></li>
 					<li><a href="#" id="social">Be Social</a>
 						<div class="social-nav">
 							<ul>
@@ -33,16 +25,16 @@
 			</nav>
 		</div>
 	</header>
-	
-	<div id="wrapper">
+
+<div id="wrapper">
 		<ul id="photos" class="instagram"></ul>
 	</div>
 
-	<script src="assets/js/jquery-2.0.3.min.js"></script>
-	<script src="assets/js/jquery.mixitup.min.js"></script>
-	<script src="assets/js/jquery.flexslider.js"></script>
-	<script src="assets/js/instagram.min.js"></script>
-	<script src="assets/js/app.js"></script>
+	<script src="{site_url}assets/js/jquery-2.0.3.min.js"></script>
+	<script src="{site_url}assets/js/jquery.mixitup.min.js"></script>
+	<script src="{site_url}assets/js/jquery.flexslider.js"></script>
+	<script src="{site_url}assets/js/instagram.min.js"></script>
+	<script src="{site_url}assets/js/app.js"></script>
 	<script>
 		// load Instagram gallery
 		$(document).ready(function() {
