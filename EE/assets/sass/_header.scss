@@ -191,6 +191,8 @@ header{
 						opacity: 1;
 					}
 					.social-nav{
+						position: relative;
+							left: 10%;
 						@include breakpoint(tablet){
 							position: absolute;
 							left: 20%;
@@ -231,6 +233,12 @@ header{
 								}
 								a{
 									text-decoration: none;
+									width: 25px;
+									margin: 20px 0 0 0;
+									@include breakpoint(tablet){
+										width: auto;
+										margin: 20px 0 0 20px;
+									}
 									@include breakpoint(mobile-landscape){
 										height: 50px;
 										margin-top: 7px;

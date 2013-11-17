@@ -4,12 +4,12 @@
 	z-index: 20;
 	#post-wrap{
 		.icon-close{
-			color: #fff;
+			color: $grey;
 			font-size: 2em;
 			font-weight: bold;
 			position: absolute;
-			top: 20px;
-			right: 20px;
+			top: 0px;
+			right: 0px;
 			z-index: 10;
 			-webkit-transition: all 300ms ease-in-out;
 			-moz-transition: all 300ms ease-in-out;
@@ -19,16 +19,41 @@
 				cursor: pointer;
 				color: $blue;
 			}
+			@include breakpoint(desktop){
+				top: 20px;
+				right: 20px;
+			}
 			@include breakpoint(mobile-landscape){
 				font-size: 1em;
 				right: 40px;
 			}
 		}
+		#video-wrap{
+			width: 50%;
+			max-width: 612px;
+			height: 374px;
+			float: left;
+			margin: 0 0 20px 0;
+			position: relative;
+			@include breakpoint(desktop){
+				width: 100%;
+			}
+			#player{
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+			}
+		}
 		.flexslider{
-			width: 100%;
-			max-height: 360px;
-			margin: 0;
+			width: 50%;
+			float: left;
+			margin: 0 0 20px 0;
 			overflow: hidden;
+			@include breakpoint(desktop){
+				width: 100%;
+			}
 			.slides{
 				width: 100%;
 				image{
@@ -42,21 +67,29 @@
 				}
 			}
 			.flex-direction-nav{
-				display: none;
+
 			}
 		}
 		.post-text-wrap{
+			width: 40%;
+			float: left;
+			margin: 0 5% 20px;
+			@include breakpoint(desktop){
+				width: 100%;
+				margin: 0;
+			}
 			@include breakpoint(mobile-landscape){
 				margin: 0 5%;
 			}
 			h4{
 				color: $grey;
 				text-transform: uppercase;
-				text-align: center; 
+				text-align: center;
+				margin: 0 auto; 
 			}
 			p{
 				width: 100%;
-				margin: 0 0 20px;
+				margin: 10px 0 20px;
 				color: $grey;
 				height: auto;
 			}

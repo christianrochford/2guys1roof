@@ -1,3 +1,4 @@
+
 $(document).ready(function(){
     var
     History = window.History,
@@ -8,6 +9,11 @@ $(document).ready(function(){
         var path = $(this).attr('href');
         var title = $(this).attr('title');
         History.pushState('ajax',title,path);
+        if($(window).width() > 320){
+            $('body').animate({scrollTop: $('body').offset().top -120 }, 1000);
+        } else {
+            $('body').animate({scrollTop: $('body').offset().top -20 }, 1000);
+        }
     });
 
     $("#content").on("click",".icon-close",function(e){
