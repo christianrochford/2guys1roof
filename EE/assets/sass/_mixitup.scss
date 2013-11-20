@@ -32,7 +32,7 @@
 		background-repeat: none !important;
 		background-position: 50% 50% !important;
 		background-size: cover !important;
-		display: inline-block;
+		display: none;
 		opacity: 0;
 		position: relative;
 		width: 24%;
@@ -155,6 +155,11 @@
 				background: transparent;
 				filter: opacity(100);
 				opacity: 1;
+				@include breakpoint(mobile-landscape){
+					background: $blue;
+					filter: opacity(60);
+					opacity: 0.6;
+				}
 			.text-wrap{
 				top: 0;
 				left: 100%;
@@ -164,7 +169,7 @@
 			    -moz-transition: all 300ms ease-in-out;
 			    -o-transition: all 300ms ease-in-out;
 			    transition: all 300ms ease-in-out;
-			    @include breakpoint(tablet){
+			    @include breakpoint(max-width, 910px){
 			    	height: 10%;
 			    }
 				@include breakpoint(mobile-landscape){
@@ -192,9 +197,13 @@
 					}
 					h4{
 						color: $grey;
-						@include breakpoint(tablet){
+						margin: 0 auto;
+						@include breakpoint(max-width, 910px){
 							font-size: 14px;
 							margin: 0 auto;
+						}
+						@include breakpoint(mobile-landscape){
+							color: #fff;
 						}
 					}
 					p{
@@ -216,34 +225,17 @@
 						@include breakpoint(tablet){
 							width: 200%;
 						}
+						@include breakpoint(max-width, 600px){
+							font-size: 12px;
+						}
 						@include breakpoint(mobile-landscape){
 							display: none;
 						}
 					}
 				}
 			}
-			.icon-wrap{
-				display: table;
-				position: absolute;
-				top: 0;
-				left: 0;
-				width: 100%;
-				height: 100%;
-			}
 			a .post-icon{
-				color: transparent;
-				display: table-cell;
-				text-align: center;
-				vertical-align: middle;
-				font-size: 5em;
-				bottom: 40%;
-				-webkit-transition: all 300ms ease-in-out;
-			    -moz-transition: all 300ms ease-in-out;
-			    -o-transition: all 300ms ease-in-out;
-			    transition: all 300ms ease-in-out;
-				@include breakpoint(tablet){
-					bottom: 30%;
-				}
+				display: none;
 				@include breakpoint(mobile-landscape){
 					display: block;
 					font-size: 2em;

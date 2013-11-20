@@ -63,7 +63,7 @@ html[xmlns] .slides {display: block;}
 /* Control Nav */
 .flex-control-nav {width: 100%; position: absolute; bottom: -40px; text-align: center;}
 .flex-control-nav li {margin: 0 6px; display: inline-block; zoom: 1; *display: inline;}
-.flex-control-paging li a {width: 11px; height: 11px; display: block; background: rgb(71,203,205); -webkit-border-radius: 50%; -moz-border-radius: 50%; -o-border-radius: 50%; background: rgba(71,203,205,0.5); cursor: pointer; text-indent: -9999px;}
+.flex-control-paging li a {width: 11px; height: 11px; display: block; background: rgb(71,203,205); -webkit-border-radius: 50%; -moz-border-radius: 50%; -o-border-radius: 50%; border-radius: 50%; background: rgba(71,203,205,0.5); cursor: pointer; text-indent: -9999px;}
 .flex-control-paging li a:hover { background: #fff; }
 .flex-control-paging li a.flex-active { background: #fff; background: rgba(255,255,255,0.5); cursor: default; }
 

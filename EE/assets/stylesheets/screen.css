@@ -3208,7 +3208,7 @@ a {
     background-repeat: none !important;
     background-position: 50% 50% !important;
     background-size: cover !important;
-    display: inline-block;
+    display: none;
     opacity: 0;
     position: relative;
     width: 24%;
@@ -3339,7 +3339,13 @@ a {
       background: transparent;
       filter: opacity(100);
       opacity: 1; }
-      /* line 158, ../sass/_mixitup.scss */
+      @media (max-width: 480px) {
+        /* line 154, ../sass/_mixitup.scss */
+        #rooms .mix.list .overbox {
+          background: #47cbcd;
+          filter: opacity(60);
+          opacity: 0.6; } }
+      /* line 163, ../sass/_mixitup.scss */
       #rooms .mix.list .overbox .text-wrap {
         top: 0;
         left: 100%;
@@ -3349,12 +3355,12 @@ a {
         -moz-transition: all 300ms ease-in-out;
         -o-transition: all 300ms ease-in-out;
         transition: all 300ms ease-in-out; }
-        @media (max-width: 768px) {
-          /* line 158, ../sass/_mixitup.scss */
+        @media (max-width: 910px) {
+          /* line 163, ../sass/_mixitup.scss */
           #rooms .mix.list .overbox .text-wrap {
             height: 10%; } }
         @media (max-width: 480px) {
-          /* line 158, ../sass/_mixitup.scss */
+          /* line 163, ../sass/_mixitup.scss */
           #rooms .mix.list .overbox .text-wrap {
             top: 0;
             left: 0;
@@ -3362,7 +3368,7 @@ a {
             margin: 0 10%;
             width: 80%;
             border-bottom: 1px solid white; } }
-        /* line 178, ../sass/_mixitup.scss */
+        /* line 183, ../sass/_mixitup.scss */
         #rooms .mix.list .overbox .text-wrap a {
           font-size: 1.2em;
           text-align: left;
@@ -3371,24 +3377,29 @@ a {
           -o-transition: all 300ms ease-in-out;
           transition: all 300ms ease-in-out; }
           @media (max-width: 480px) {
-            /* line 178, ../sass/_mixitup.scss */
+            /* line 183, ../sass/_mixitup.scss */
             #rooms .mix.list .overbox .text-wrap a {
               font-size: 2em;
               color: #fff;
               text-align: center; } }
           @media (max-width: 320px) {
-            /* line 178, ../sass/_mixitup.scss */
+            /* line 183, ../sass/_mixitup.scss */
             #rooms .mix.list .overbox .text-wrap a {
               font-size: 1.5em; } }
-          /* line 193, ../sass/_mixitup.scss */
+          /* line 198, ../sass/_mixitup.scss */
           #rooms .mix.list .overbox .text-wrap a h4 {
-            color: #979795; }
-            @media (max-width: 768px) {
-              /* line 193, ../sass/_mixitup.scss */
+            color: #979795;
+            margin: 0 auto; }
+            @media (max-width: 910px) {
+              /* line 198, ../sass/_mixitup.scss */
               #rooms .mix.list .overbox .text-wrap a h4 {
                 font-size: 14px;
                 margin: 0 auto; } }
-          /* line 200, ../sass/_mixitup.scss */
+            @media (max-width: 480px) {
+              /* line 198, ../sass/_mixitup.scss */
+              #rooms .mix.list .overbox .text-wrap a h4 {
+                color: #fff; } }
+          /* line 209, ../sass/_mixitup.scss */
           #rooms .mix.list .overbox .text-wrap a p {
             color: #979795;
             display: block;
@@ -3403,69 +3414,52 @@ a {
             -o-transition: all 300ms ease-in-out;
             transition: all 300ms ease-in-out; }
             @media (max-width: 960px) {
-              /* line 200, ../sass/_mixitup.scss */
+              /* line 209, ../sass/_mixitup.scss */
               #rooms .mix.list .overbox .text-wrap a p {
                 width: 100%; } }
             @media (max-width: 768px) {
-              /* line 200, ../sass/_mixitup.scss */
+              /* line 209, ../sass/_mixitup.scss */
               #rooms .mix.list .overbox .text-wrap a p {
                 width: 200%; } }
+            @media (max-width: 600px) {
+              /* line 209, ../sass/_mixitup.scss */
+              #rooms .mix.list .overbox .text-wrap a p {
+                font-size: 12px; } }
             @media (max-width: 480px) {
-              /* line 200, ../sass/_mixitup.scss */
+              /* line 209, ../sass/_mixitup.scss */
               #rooms .mix.list .overbox .text-wrap a p {
                 display: none; } }
-      /* line 225, ../sass/_mixitup.scss */
-      #rooms .mix.list .overbox .icon-wrap {
-        display: table;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%; }
-      /* line 233, ../sass/_mixitup.scss */
+      /* line 237, ../sass/_mixitup.scss */
       #rooms .mix.list .overbox a .post-icon {
-        color: transparent;
-        display: table-cell;
-        text-align: center;
-        vertical-align: middle;
-        font-size: 5em;
-        bottom: 40%;
-        -webkit-transition: all 300ms ease-in-out;
-        -moz-transition: all 300ms ease-in-out;
-        -o-transition: all 300ms ease-in-out;
-        transition: all 300ms ease-in-out; }
-        @media (max-width: 768px) {
-          /* line 233, ../sass/_mixitup.scss */
-          #rooms .mix.list .overbox a .post-icon {
-            bottom: 30%; } }
+        display: none; }
         @media (max-width: 480px) {
-          /* line 233, ../sass/_mixitup.scss */
+          /* line 237, ../sass/_mixitup.scss */
           #rooms .mix.list .overbox a .post-icon {
             display: block;
             font-size: 2em;
             bottom: 25%; } }
-  /* line 256, ../sass/_mixitup.scss */
+  /* line 248, ../sass/_mixitup.scss */
   #rooms .mix.list.on .overbox {
     background: #47cbcd;
     background: rgba(71, 203, 205, 0.7); }
-    /* line 259, ../sass/_mixitup.scss */
+    /* line 251, ../sass/_mixitup.scss */
     #rooms .mix.list.on .overbox .post-icon {
       color: #fff; }
-  /* line 265, ../sass/_mixitup.scss */
+  /* line 257, ../sass/_mixitup.scss */
   #rooms .gap {
     display: inline-block;
     width: 32%;
     height: 0; }
     @media (max-width: 960px) {
-      /* line 265, ../sass/_mixitup.scss */
+      /* line 257, ../sass/_mixitup.scss */
       #rooms .gap {
         width: 48.5%; } }
     @media (max-width: 768px) {
-      /* line 265, ../sass/_mixitup.scss */
+      /* line 257, ../sass/_mixitup.scss */
       #rooms .gap {
         width: 31.5%; } }
     @media (max-width: 480px) {
-      /* line 265, ../sass/_mixitup.scss */
+      /* line 257, ../sass/_mixitup.scss */
       #rooms .gap {
         width: 100%; } }
 
@@ -3971,6 +3965,7 @@ html[xmlns] .slides {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -o-border-radius: 50%;
+  border-radius: 50%;
   background: rgba(71, 203, 205, 0.5);
   cursor: pointer;
   text-indent: -9999px; }
@@ -4066,70 +4061,75 @@ html[xmlns] .slides {
       /* line 6, ../sass/_posts.scss */
       #content #post-wrap .icon-close {
         font-size: 1em;
-        right: 40px; } }
+        right: 20px; } }
   /* line 31, ../sass/_posts.scss */
   #content #post-wrap #video-wrap {
     width: 50%;
-    max-width: 612px;
-    height: 374px;
     float: left;
     margin: 0 0 20px 0;
-    position: relative; }
+    position: relative;
+    padding-bottom: 28.7%;
+    /* 16:9 */
+    padding-top: 25px;
+    height: 0; }
     @media (max-width: 960px) {
       /* line 31, ../sass/_posts.scss */
       #content #post-wrap #video-wrap {
-        width: 100%; } }
-    /* line 41, ../sass/_posts.scss */
+        width: 100%;
+        padding-bottom: 57%;
+        /* 16:9 */ } }
+    /* line 43, ../sass/_posts.scss */
     #content #post-wrap #video-wrap #player {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
-      height: 100%; }
-  /* line 49, ../sass/_posts.scss */
+      height: 100%;
+      border: none; }
+  /* line 52, ../sass/_posts.scss */
   #content #post-wrap .flexslider {
     width: 50%;
     float: left;
     margin: 0 0 20px 0;
     overflow: hidden; }
     @media (max-width: 960px) {
-      /* line 49, ../sass/_posts.scss */
+      /* line 52, ../sass/_posts.scss */
       #content #post-wrap .flexslider {
         width: 100%; } }
-    /* line 57, ../sass/_posts.scss */
+    /* line 60, ../sass/_posts.scss */
     #content #post-wrap .flexslider .slides {
       width: 100%; }
-      /* line 59, ../sass/_posts.scss */
+      /* line 62, ../sass/_posts.scss */
       #content #post-wrap .flexslider .slides image {
         width: 100%; }
-    /* line 63, ../sass/_posts.scss */
+    /* line 66, ../sass/_posts.scss */
     #content #post-wrap .flexslider .flex-control-nav {
       bottom: 0; }
       @media (max-width: 480px) {
-        /* line 63, ../sass/_posts.scss */
+        /* line 66, ../sass/_posts.scss */
         #content #post-wrap .flexslider .flex-control-nav {
           width: 90%; } }
-  /* line 73, ../sass/_posts.scss */
+  /* line 76, ../sass/_posts.scss */
   #content #post-wrap .post-text-wrap {
     width: 40%;
     float: left;
-    margin: 0 5% 20px; }
+    margin: 0 20px 20px; }
     @media (max-width: 960px) {
-      /* line 73, ../sass/_posts.scss */
+      /* line 76, ../sass/_posts.scss */
       #content #post-wrap .post-text-wrap {
         width: 100%;
         margin: 0; } }
     @media (max-width: 480px) {
-      /* line 73, ../sass/_posts.scss */
+      /* line 76, ../sass/_posts.scss */
       #content #post-wrap .post-text-wrap {
         margin: 0 5%; } }
-    /* line 84, ../sass/_posts.scss */
+    /* line 87, ../sass/_posts.scss */
     #content #post-wrap .post-text-wrap h4 {
       color: #979795;
       text-transform: uppercase;
       text-align: center;
-      margin: 0 auto; }
-    /* line 90, ../sass/_posts.scss */
+      margin: 10px auto 0; }
+    /* line 93, ../sass/_posts.scss */
     #content #post-wrap .post-text-wrap p {
       width: 100%;
       margin: 10px 0 20px;
@@ -4180,8 +4180,7 @@ html[xmlns] .slides {
       background-size: cover !important;
       width: 30%;
       float: left;
-      height: 190px;
-      margin-left: 20px;
+      height: 200px;
       -webkit-transition: all 300ms ease-in-out;
       -moz-transition: all 300ms ease-in-out;
       -o-transition: all 300ms ease-in-out;
@@ -4190,15 +4189,12 @@ html[xmlns] .slides {
         /* line 32, ../sass/_theguys.scss */
         #wrapper #image-wrap #minor-top, #wrapper #image-wrap #minor-bottom {
           display: none; } }
-    /* line 48, ../sass/_theguys.scss */
-    #wrapper #image-wrap #minor-bottom {
-      margin-top: 20px; }
-  /* line 52, ../sass/_theguys.scss */
+  /* line 48, ../sass/_theguys.scss */
   #wrapper h4 {
     color: #979795;
     margin: 24px auto 0;
     text-transform: uppercase; }
-  /* line 57, ../sass/_theguys.scss */
+  /* line 53, ../sass/_theguys.scss */
   #wrapper p {
     color: #979795;
     width: 100%;
@@ -4206,11 +4202,11 @@ html[xmlns] .slides {
     margin: 14px 0 7px;
     height: auto; }
     @media (max-width: 480px) {
-      /* line 57, ../sass/_theguys.scss */
+      /* line 53, ../sass/_theguys.scss */
       #wrapper p {
         width: 90%;
         margin: 20px 5%; } }
-  /* line 68, ../sass/_theguys.scss */
+  /* line 64, ../sass/_theguys.scss */
   #wrapper .icon-envelope {
     float: right;
     margin: -30px 0 20px;

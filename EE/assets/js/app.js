@@ -58,6 +58,7 @@ $(document).ready(menuFunction);
 
 $(window).resize(menuFunction);
 
+
 // Initialize MixItUp
 
 $(document).ready(function(){
@@ -65,7 +66,7 @@ $(document).ready(function(){
 		$('#rooms').mixitup({
 			effects: ['fade','scale'],
 			multiFilter: false,
-			showOnLoad: 'living-room kitchen bathroom bedroom study garden exterior',
+			showOnLoad: 'livingroom kitchen bathroom bedroom study garden exterior',
 		    easing: 'smooth',
 		    layoutMode: 'grid',
 		    targetDisplayGrid: 'inline-block',
@@ -108,15 +109,6 @@ $(document).ready(function() {
 	$('.flexslider').flexslider();
 });
 
-// Set div size for guys images
-
-$(document).ready(function(){
-	$('#major').css({ width: $('#wrapper').width() * 0.7 - 20 });
-});
-
-$(window).resize(function(){
-	$('#major').css({ width: $('#wrapper').width() * 0.7 - 20 });
-})
 
 
 

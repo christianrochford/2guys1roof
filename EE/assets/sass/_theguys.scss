@@ -35,8 +35,7 @@
 			background-size: cover !important;
 			width: 30%;
 			float: left;
-			height: 190px;
-			margin-left: 20px;
+			height: 200px;
 			-webkit-transition: all 300ms ease-in-out;
 		    -moz-transition: all 300ms ease-in-out;
 		    -o-transition: all 300ms ease-in-out;
@@ -44,9 +43,6 @@
 			@include breakpoint(mobile-landscape){
 				display: none;
 			}
-		}
-		#minor-bottom{
-			margin-top: 20px;
 		}
 	}
 	h4{
