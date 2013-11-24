@@ -44,7 +44,7 @@
 						<a href="{site_url}index.php/base/posts/{url_title}" class="post-link" title="{url_title}"><h4>{title}</h4></a>
 						<a href="{site_url}index.php/base/posts/{url_title}" class="post-link" title="{url_title}"><p>{exp:excerpt limit="50" limit_type="..."}{article_text}{/exp:excerpt}</p></a>
 					</div>
-					<a class="icon-house post-icon" aria-hidden="true"></a>
+					<a class="icon-cube post-icon" aria-hidden="true"></a>
 				</div>
 			</li>
 		{/exp:channel:entries}

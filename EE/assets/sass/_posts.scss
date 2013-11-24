@@ -2,9 +2,12 @@
 	float: left;
 	position: relative;
 	z-index: 20;
+	@include breakpoint(mobile-landscape){
+		top: 30px;
+	}
 	#post-wrap{
 		.icon-close{
-			color: $grey;
+			color: $blue;
 			font-size: 2em;
 			font-weight: bold;
 			position: absolute;
@@ -17,21 +20,22 @@
 			transition: all 300ms ease-in-out;	
 			&:hover, &:focus, &:active{
 				cursor: pointer;
-				color: $blue;
+				color: $grey;
 			}
 			@include breakpoint(desktop){
 				top: 20px;
 				right: 20px;
 			}
 			@include breakpoint(mobile-landscape){
-				font-size: 1em;
+				font-size: 1.5em;
+				top: -35px;
 				right: 20px;
 			}
 		}
 		#video-wrap{
 			width: 50%;
 			float: left;
-			margin: 0 0 20px 0;
+			margin: 0 0 20px;
 			position: relative;
 			padding-bottom: 28.7%; /* 16:9 */
 			padding-top: 25px;
@@ -39,6 +43,10 @@
 			@include breakpoint(desktop){
 				width: 100%;
 				padding-bottom: 57%; /* 16:9 */
+			}
+			@include breakpoint(mobile-landscape){
+				padding-bottom: 48%; /* 16:9 */
+				margin-bottom: 8px;
 			}
 			#player{
 				position: absolute;
@@ -52,15 +60,23 @@
 		.flexslider{
 			width: 50%;
 			float: left;
-			margin: 0 0 20px 0;
+			margin: 0 0 20px;
 			overflow: hidden;
 			@include breakpoint(desktop){
 				width: 100%;
+			}
+			@include breakpoint(mobile-landscape){
+				margin-bottom: 8px;
 			}
 			.slides{
 				width: 100%;
 				image{
 					width: 100%;
+				}
+			}
+			.flex-direction-nav a{
+				@include breakpoint(mobile-landscape){
+					margin-top: -60px;
 				}
 			}
 			.flex-control-nav{
@@ -69,8 +85,17 @@
 					width: 90%;
 				}
 			}
-			.flex-direction-nav{
-
+			&:hover{
+				.flex-prev{
+					@include breakpoint(mobile-landscape){
+						left: 25px;
+					}
+				}
+				.flex-next{
+					@include breakpoint(mobile-landscape){
+						right: 25px;
+					}
+				}
 			}
 		}
 		.post-text-wrap{
@@ -82,13 +107,17 @@
 				margin: 0;
 			}
 			@include breakpoint(mobile-landscape){
-				margin: 0 5%;
+				margin: 0 5% 25px;
+				width: 90%;
 			}
 			h4{
 				color: $grey;
 				text-transform: uppercase;
 				text-align: center;
-				margin: 10px auto 0; 
+				margin: 10px auto 0;
+				@include breakpoint(mobile-landscape){
+					font-size: 1.5em;
+				} 
 			}
 			p{
 				width: 100%;
