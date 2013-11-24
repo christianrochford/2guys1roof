@@ -51,6 +51,22 @@ $(document).ready(function(){
 		    animateGridList: true
 		});
 	});
+	$(function(){
+		$('#food').mixitup({
+			effects: ['fade','scale'],
+			multiFilter: false,
+		    easing: 'smooth',
+		    layoutMode: 'grid',
+		    targetDisplayGrid: 'inline-block',
+		    targetDisplayList: 'block',
+		    transitionSpeed: 600,
+		    resizeContainer: true,
+		    minHeight: 0,
+		    perspectiveDistance: '3000',
+		    perspectiveOrigin: '50% 50%',
+		    animateGridList: true
+		});
+	});
 	$('#list-trigger').click(function(e){
 		e.preventDefault();
 		$('#rooms').mixitup('toList');

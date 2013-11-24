@@ -125,6 +125,17 @@
 				color: $grey;
 				height: auto;
 			}
+			ol{
+				width: 100%;
+				float: left;
+				@include breakpoint(mobile-landscape){
+					width: 95%;
+				}
+				li{
+					color: $grey;
+					margin: 10px;
+				}
+			}
 		}
 	}
 }

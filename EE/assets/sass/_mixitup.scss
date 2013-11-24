@@ -1,5 +1,5 @@
 
-.home, .guys, .place, .posts{
+.home, .food, .guys, .place, .posts, .meals{
 	color: #f3f3f4;
 	font-family: 'Quicksand', sans-serif;
 		#wrapper{
@@ -23,7 +23,7 @@
 	}
 }
 
-#rooms{
+#rooms, #food{
 	position: relative;
 	list-style-type: none;
 	text-align: justify;
