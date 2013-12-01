@@ -1,0 +1,64 @@
+
+#popup-view.open{
+  width: 150px;
+  right: 23px;
+}
+#popup-view.open ul{
+  width: 150px;
+  height: 28px;
+}
+#popup-view.open ul li{
+  .social-icon{
+    color: $blue;
+  }
+}
+#popup-view {
+  border: 0;
+  width: 0;
+  height: 0;
+  top: 0;
+  right: 23px;
+  position: absolute;
+  z-index: 0;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  ul{
+    width: 0;
+    height: 0;
+    list-style-type: none;
+    margin: 0;
+    li{
+      height: 28px;
+      float: left;
+      width: 25%;
+      .social-icon{
+        font-size: 2em;
+        color: transparent;
+        padding: 0 0px;
+        text-align: center;
+        display: block;
+        width: 28px;
+        height: 28px;
+        -webkit-transition: all 300ms ease-in-out;
+        -moz-transition: all 300ms ease-in-out;
+        -o-transition: all 300ms ease-in-out;
+        transition: all 300ms ease-in-out;
+        &:hover, &:focus, &:active{
+          color: $grey;
+        }
+      }
+    }
+  }
+}
+.meals{
+  #popup-view.open ul li{
+  .social-icon{
+    color: $green;
+    &:hover, &:focus, &:active{
+      color: $grey;
+    }
+  }
+}
+}
