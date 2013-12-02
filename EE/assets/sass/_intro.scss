@@ -84,6 +84,12 @@
 						    transition: all 300ms ease-in-out;
 						}
 					}
+					.icon-camera{
+						font-size: 0.8em;
+						@include breakpoint(mobile-landscape){
+							font-size: 0.7em;
+						}
+					}
 				}
 			}
 		}

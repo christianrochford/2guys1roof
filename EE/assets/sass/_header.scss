@@ -34,7 +34,7 @@ header{
 		@include breakpoint(mobile-landscape){
 			height: 65px;
 		}
-		.icon-house, .icon-menu, .icon-fort, .icon-uniF7A8, .icon-phpbb{
+		.icon-house, .icon-menu, .icon-camera, .icon-guys, .icon-cutlery{
 			font-size: 12em;
 			display: block;
 			color: #fff;
@@ -48,18 +48,54 @@ header{
 				padding-top: 15px;
 				margin-left: 0;
 				font-size: 5em;
+				float: right;
 			}
 			@include breakpoint(mobile-landscape){
 				padding-top: 4px;
-				margin-left: 0px;
 				font-size: 4em;			
 			}
 		}
-		.icon-house, .icon-fort, .icon-uniF7A8, .icon-phpbb{
-			width: 100px;
+		.icon-house{
+			margin-left: 35px;
 			@include breakpoint(tablet){
-				float: right;
+				margin-left: 0;
 			}
+		}
+		.icon-cutlery{
+			font-size: 11em;
+			@include breakpoint(tablet){
+				font-size: 5em;
+				padding-top: 15px;
+				margin-left: 0;
+			}
+		}
+		.icon-camera{
+			font-size: 7em;
+			padding-top: 60px;
+			@include breakpoint(tablet){
+				padding: 20px 20px 0 0;
+				margin-left: 0;
+				font-size: 4em;
+			}
+			@include breakpoint(mobile-landscape){
+				padding: 16px 10px 0 0;
+				font-size: 2.5em;			
+			}
+		}
+		.icon-guys{
+			font-size: 8.5em;
+			@include breakpoint(tablet){
+				padding: 0 20px 0 0;
+				margin-left: 0;
+				font-size: 5em;
+			}
+			@include breakpoint(mobile-landscape){
+				padding-top: 16px;
+				font-size: 2.5em;			
+			}
+		}
+		.icon-house, .icon-cutlery{
+			width: 100px;
 			@include breakpoint(mobile-landscape){
 				width: 68px;
 				font-size: 3em;
@@ -79,7 +115,7 @@ header{
 				display: table;
 			}
 			@include breakpoint(mobile-landscape){
-				width: 64px;
+				width: 55px;
 			}
 			.icon-menu{
 				font-size: 3em;
@@ -89,7 +125,11 @@ header{
 				&:hover, &:focus, &:active{
 					cursor: pointer;
 				}
+				@include breakpoint(tablet){
+					padding-top: 28px;
+				}
 				@include breakpoint(mobile-landscape){
+					padding-top: 20px;
 					font-size: 2em;
 				}
 			}
@@ -104,26 +144,29 @@ header{
 			    margin-top: 30px;
 			    text-align: center;
 			    text-transform: uppercase;
-			    width: 100%;
-			}
-			@include breakpoint(mobile-landscape){
-				margin-top: 15px;
 			}
 			@include breakpoint(mobile-landscape){
 				font-size: 2em;
 				margin-top: 22px;
+				margin-left: 20%;
 			}
 		}
 	}
 	.logo.minimal{
 		@include breakpoint(tablet){
 			height: 50px;
-			.icon-house, .icon-fort, .icon-uniF7A8, .icon-phpbb{
+			.icon-house, .icon-camera, .icon-cutlery, .icon-guys{
+				width: 70px;
 				font-size: 2em;
 				padding-top: 10px;
 			}
+			.icon-guys{
+				width: 56px;
+			}
 			#mobile-nav{
+				width: 45px;
 				.icon-menu{
+					padding-top: 15px;
 					font-size: 1.5em;
 				}
 			}
