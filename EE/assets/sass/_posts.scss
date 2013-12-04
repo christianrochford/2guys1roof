@@ -47,7 +47,13 @@
 			}
 			@include breakpoint(mobile-landscape){
 				padding-bottom: 48%; /* 16:9 */
-				margin-bottom: 8px;
+				margin: 0 5% 8px;
+				width: 90%;
+			}
+			@include breakpoint(mobile){
+				padding-bottom: 41%;
+				margin: 0 7% 8px;
+				width: 86%;
 			}
 			#player{
 				position: absolute;
@@ -132,7 +138,7 @@
 					margin: 0 0 20px 0; 
 				}
 			}
-			ol{
+			ol, ul{
 				width: 100%;
 				float: left;
 				@include breakpoint(mobile-landscape){
@@ -142,6 +148,9 @@
 					color: $grey;
 					margin: 10px;
 				}
+			}
+			ul{
+				margin-left: 20px;
 			}
 		}
 		#links{

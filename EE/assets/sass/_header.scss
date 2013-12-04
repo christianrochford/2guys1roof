@@ -84,14 +84,15 @@ header{
 		}
 		.icon-guys{
 			font-size: 8.5em;
+			padding-top: 46px;
 			@include breakpoint(tablet){
-				padding: 0 20px 0 0;
+				padding: 14px 20px 0 0;
 				margin-left: 0;
 				font-size: 5em;
 			}
 			@include breakpoint(mobile-landscape){
-				padding-top: 16px;
-				font-size: 2.5em;			
+				padding: 12px 10px 0px 10px;
+				font-size: 3em;			
 			}
 		}
 		.icon-house, .icon-cutlery{
@@ -148,20 +149,29 @@ header{
 			@include breakpoint(mobile-landscape){
 				font-size: 2em;
 				margin-top: 22px;
-				margin-left: 20%;
+				margin-left: 25%;
 			}
 		}
 	}
 	.logo.minimal{
 		@include breakpoint(tablet){
 			height: 50px;
-			.icon-house, .icon-camera, .icon-cutlery, .icon-guys{
+			.icon-house, .icon-cutlery{
 				width: 70px;
 				font-size: 2em;
 				padding-top: 10px;
 			}
+			.icon-camera{
+				font-size: 2em;
+				padding-top: 10px;
+			}
 			.icon-guys{
-				width: 56px;
+				font-size: 2.5em;
+				padding-top: 7px;
+				@include breakpoint(mobile-landscape){
+					font-size: 2em;
+					padding-top: 10px;
+				}
 			}
 			#mobile-nav{
 				width: 45px;

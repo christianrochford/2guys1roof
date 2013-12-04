@@ -58,10 +58,14 @@
 			margin: 14px 0 7px;
 			height: auto;
 		}
+		p:last-of-type{
+			margin-bottom: 20px;
+		}
 		.icon-envelope{
 			float: right;
-			margin: -30px 10px 0px;
+			margin: -42px 10px 0px;
 			font-size: 1.5em;
+			padding-bottom: 20px;
 			&:hover, &:focus, &:active{
 				color: $yellow;
 			}

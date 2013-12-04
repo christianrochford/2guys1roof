@@ -131,7 +131,7 @@
 					display: none;
 				}
 			}
-			.icon-house.post-icon{
+			.icon-house.post-icon, .icon-cutlery.post-icon{
 				color: $white;
 				font-size: 4em;
 				display: block;
@@ -277,7 +277,7 @@
 					}
 				}
 			}
-			a.icon-house.post-icon{
+			a.icon-house.post-icon, .icon-cutlery.post-icon{
 				color: transparent;
 				bottom: 40%;
 				@include breakpoint(tablet-small){
@@ -295,7 +295,7 @@
 		.overbox.list-hover{
 			background: rgb(71,203,205);
 			background: rgba(71,203,205, 0.7);
-			a.icon-house.post-icon{
+			a.icon-house.post-icon, .icon-cutlery.post-icon{
 				color: #fff;
 			}
 		}
