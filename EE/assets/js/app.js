@@ -20,7 +20,7 @@ $(window).resize(function(){
 // Menu
 
 $(document).ready(function(){
-	$('a#roof, a#food').click(
+	$('a#roof-link, a#food-link').click(
 		function(){
 			$('#categories').slideToggle(500);
 			$('#categories').toggleClass('on');
@@ -87,34 +87,6 @@ $(document).ready(function(){
 	});
 });
 
-$(document).ready(function(){
-	$('#food').mixitup({
-		effects: ['fade','scale'],
-		multiFilter: false,
-		showOnLoad: 'mains snacks glutenfree dairyfree vegetarian dining-out homemade',
-	    easing: 'smooth',
-	    layoutMode: 'grid',
-	    targetDisplayGrid: 'inline-block',
-	    targetDisplayList: 'block',
-	    transitionSpeed: 600,
-	    resizeContainer: true,
-	    minHeight: 0,
-	    perspectiveDistance: '3000',
-	    perspectiveOrigin: '50% 50%',
-	    animateGridList: true
-	});
-	$('#list-trigger').click(function(e){
-		e.preventDefault();
-		$('#food').mixitup('toList');
-		$('#food .mix').addClass('list');
-	});
-	$('#grid-trigger').click(function(e){
-		e.preventDefault();
-		$('#food').mixitup('toGrid');
-		$('#food .mix').removeClass('list');
-	});
-});
-
 // Show titles
 
 $(document).ready(function(){
@@ -155,9 +127,10 @@ $(document).ready(function(){
 
  $(window).load(function(){
     
-       var $container = $('.food'),
+       var $container = $('#wrapper'),
         filters = {};
 $container.imagesLoaded( function(){
+  if ($("body").hasClass('food')) { 
 
      $container.isotope({
       itemSelector : '.element',
@@ -180,6 +153,30 @@ $(window).smartresize(function(){
 
   }
 
+  else {
+
+   $container.isotope({
+      itemSelector : '.element',
+      // disable resizing
+      resizable: false,
+      // set columnWidth to a percentage of container width
+      masonry: {
+        columnWidth: $container.width() / 4
+      }
+    });
+
+$(window).smartresize(function(){
+     $container.isotope({
+        // set columnWidth to a percentage of container width
+        masonry: {
+          columnWidth: $container.width() / 4
+        }
+      });
+   });
+}
+ 
+
+
    });
      
     
@@ -195,10 +192,6 @@ $(window).smartresize(function(){
       // change selected class
       $('.filter').find('.selected').removeClass('selected');
       $this.addClass('selected');
-      $('#product-nav').slideUp('fast');
-      $('#dish-nav').slideUp('fast');
-      $('#type-nav').slideUp('fast');
-
       
       // store filter value in object
       // i.e. filters.product = 'red'
@@ -215,5 +208,11 @@ $(window).smartresize(function(){
       return false;
     });  
   });
+
+
+
+
+     
+    
 
 
