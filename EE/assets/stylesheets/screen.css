@@ -4634,22 +4634,22 @@ html[xmlns] .slides {
     background: #47cbcd; }
     /* line 99, ../sass/_intro.scss */
     .intro #content #roof span:hover, .intro #content #roof span:focus, .intro #content #roof span:active {
-      color: #47cbcd; }
+      color: #3db852; }
   /* line 104, ../sass/_intro.scss */
   .intro #content #food {
     background: #3db852; }
     /* line 107, ../sass/_intro.scss */
     .intro #content #food span:hover, .intro #content #food span:focus, .intro #content #food span:active {
-      color: #3db852; }
+      color: #47cbcd; }
   /* line 112, ../sass/_intro.scss */
   .intro #content #place {
     background: #ff4252; }
     /* line 115, ../sass/_intro.scss */
     .intro #content #place span:hover, .intro #content #place span:focus, .intro #content #place span:active {
-      color: #ff4252; }
+      color: #c2b647; }
   /* line 120, ../sass/_intro.scss */
   .intro #content #guys {
     background: #c2b647; }
     /* line 123, ../sass/_intro.scss */
     .intro #content #guys span:hover, .intro #content #guys span:focus, .intro #content #guys span:active {
-      color: #c2b647; }
+      color: #ff4252; }

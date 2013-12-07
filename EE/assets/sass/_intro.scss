@@ -97,7 +97,7 @@
 			background: $blue;
 			span{
 				&:hover, &:focus, &:active{
-					color: $blue;
+					color: $green;
 				}
 			}
 		}
@@ -105,7 +105,7 @@
 			background: $green;
 			span{
 				&:hover, &:focus, &:active{
-					color: $green;
+					color: $blue;
 				}
 			}
 		}
@@ -113,7 +113,7 @@
 			background: $red;
 			span{
 				&:hover, &:focus, &:active{
-					color: $red;
+					color: $yellow;
 				}
 			}
 		}
@@ -121,7 +121,7 @@
 			background: $yellow;
 			span{
 				&:hover, &:focus, &:active{
-					color: $yellow;
+					color: $red;
 				}
 			}
 		}

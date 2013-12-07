@@ -60,22 +60,20 @@ $(window).scroll(function(){
 // Initialize MixItUp
 
 $(document).ready(function(){
-	$(function(){
-		$('#rooms').mixitup({
-			effects: ['fade','scale'],
-			multiFilter: false,
-			showOnLoad: 'livingroom kitchen bathroom bedroom study garden exterior',
-		    easing: 'smooth',
-		    layoutMode: 'grid',
-		    targetDisplayGrid: 'inline-block',
-		    targetDisplayList: 'block',
-		    transitionSpeed: 600,
-		    resizeContainer: true,
-		    minHeight: 0,
-		    perspectiveDistance: '3000',
-		    perspectiveOrigin: '50% 50%',
-		    animateGridList: true
-		});
+	$('#rooms').mixitup({
+		effects: ['fade','scale'],
+		multiFilter: false,
+		showOnLoad: 'livingroom kitchen bathroom bedroom study garden exterior',
+	    easing: 'smooth',
+	    layoutMode: 'grid',
+	    targetDisplayGrid: 'inline-block',
+	    targetDisplayList: 'block',
+	    transitionSpeed: 600,
+	    resizeContainer: true,
+	    minHeight: 0,
+	    perspectiveDistance: '3000',
+	    perspectiveOrigin: '50% 50%',
+	    animateGridList: true
 	});
 	$('#list-trigger').click(function(e){
 		e.preventDefault();
@@ -86,6 +84,34 @@ $(document).ready(function(){
 		e.preventDefault();
 		$('#rooms').mixitup('toGrid');
 		$('#rooms .mix').removeClass('list');
+	});
+});
+
+$(document).ready(function(){
+	$('#food').mixitup({
+		effects: ['fade','scale'],
+		multiFilter: false,
+		showOnLoad: 'mains snacks glutenfree dairyfree vegetarian dining-out homemade',
+	    easing: 'smooth',
+	    layoutMode: 'grid',
+	    targetDisplayGrid: 'inline-block',
+	    targetDisplayList: 'block',
+	    transitionSpeed: 600,
+	    resizeContainer: true,
+	    minHeight: 0,
+	    perspectiveDistance: '3000',
+	    perspectiveOrigin: '50% 50%',
+	    animateGridList: true
+	});
+	$('#list-trigger').click(function(e){
+		e.preventDefault();
+		$('#food').mixitup('toList');
+		$('#food .mix').addClass('list');
+	});
+	$('#grid-trigger').click(function(e){
+		e.preventDefault();
+		$('#food').mixitup('toGrid');
+		$('#food .mix').removeClass('list');
 	});
 });
 
@@ -106,7 +132,6 @@ $(document).ready(function(){
 });
 
 
-
 // Initialize flexslider
 
 $(document).ready(function() {
@@ -125,5 +150,70 @@ $(document).ready(function(){
 		}
 	);
 })
+
+// Isotope 
+
+ $(window).load(function(){
+    
+       var $container = $('.food'),
+        filters = {};
+$container.imagesLoaded( function(){
+
+     $container.isotope({
+      itemSelector : '.element',
+      // disable resizing
+      resizable: false,
+      // set columnWidth to a percentage of container width
+      masonry: {
+        columnWidth: $container.width() / 33
+      }
+    });
+
+$(window).smartresize(function(){
+ $container.isotope({
+        // set columnWidth to a percentage of container width
+        masonry: {
+          columnWidth: $container.width() / 33
+        }
+      });
+ });   
+
+  }
+
+   });
+     
+    
+     // filter buttons
+    $('.filter a').click(function(){
+      var $this = $(this);
+      // don't proceed if already selected
+      if ( $this.hasClass('selected') ) {
+        return;
+      }
+      
+      var $optionSet = $this.parents('.option-set');
+      // change selected class
+      $('.filter').find('.selected').removeClass('selected');
+      $this.addClass('selected');
+      $('#product-nav').slideUp('fast');
+      $('#dish-nav').slideUp('fast');
+      $('#type-nav').slideUp('fast');
+
+      
+      // store filter value in object
+      // i.e. filters.product = 'red'
+      var group = $optionSet.attr('data-filter-group');
+      filters[ group ] = $this.attr('data-filter-value');
+      // convert object into array
+      var isoFilters = [];
+      for ( var prop in filters ) {
+        isoFilters.push( filters[ prop ] )
+      }
+      var selector = isoFilters.join('');
+      $container.isotope({ filter: selector });
+
+      return false;
+    });  
+  });
 
 

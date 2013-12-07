@@ -2,7 +2,7 @@
 
 <body class="place">
 
-{embed="base/_global_header"}
+{embed="base/_place_header"}
 
 <div id="wrapper">
 		<ul id="photos" class="instagram"></ul>

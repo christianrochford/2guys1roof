@@ -2,7 +2,7 @@
 
 <body class="guys">
 
-{embed="base/_global_header"}
+{embed="base/_guys_header"}
 
 <div id="wrapper">
 {exp:channel:entries channel="the_guys"}
@@ -23,6 +23,7 @@
 			{/exp:channel_images:images}
 			);"></div>
 		</div>
+		<h4>The Guys</h4>
 		{guys_text}
 		<a href="mailto:rochfordchristian@gmail.com" class="icon-envelope" aria-hidden="true"></a>
 {/exp:channel:entries}
