@@ -56,37 +56,6 @@ $(window).scroll(function(){
 	}
 })
 
-
-// Initialize MixItUp
-
-$(document).ready(function(){
-	$('#rooms').mixitup({
-		effects: ['fade','scale'],
-		multiFilter: false,
-		showOnLoad: 'livingroom kitchen bathroom bedroom study garden exterior',
-	    easing: 'smooth',
-	    layoutMode: 'grid',
-	    targetDisplayGrid: 'inline-block',
-	    targetDisplayList: 'block',
-	    transitionSpeed: 600,
-	    resizeContainer: true,
-	    minHeight: 0,
-	    perspectiveDistance: '3000',
-	    perspectiveOrigin: '50% 50%',
-	    animateGridList: true
-	});
-	$('#list-trigger').click(function(e){
-		e.preventDefault();
-		$('#rooms').mixitup('toList');
-		$('#rooms .mix').addClass('list');
-	});
-	$('#grid-trigger').click(function(e){
-		e.preventDefault();
-		$('#rooms').mixitup('toGrid');
-		$('#rooms .mix').removeClass('list');
-	});
-});
-
 // Show titles
 
 $(document).ready(function(){
@@ -101,6 +70,9 @@ $(document).ready(function(){
 			$(this).closest('.overbox').removeClass('list-hover');
 		}
 	)
+	$('#food').on('hover','.element',function(){
+		$(this).toggleClass('on');
+	})
 });
 
 

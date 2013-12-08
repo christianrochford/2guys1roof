@@ -21,14 +21,14 @@
 		}
 	}
 }
-.home{
+.home, .food{
 	#wrapper{
 		@include breakpoint(mobile-landscape){
 			margin-top: 85px;
 		}
 	}
 }
-#rooms, #food{
+#rooms{
 	position: relative;
 	list-style-type: none;
 	text-align: justify;
@@ -314,31 +314,6 @@
 		@include breakpoint(mobile-landscape){
 			width: 100%;
 		}
-	}
-}
-
-.food #food .mix .overbox{
-	background: $green;
-	background: rgba(61,184,82, 0.7);
-}
-.food #food .mix.list{ 
-	.overbox{
-		background: transparent;
-		@include breakpoint(mobile-landscape){
-			background: $green;
-			background: rgba(61,184,82, 0.7);
-		}
-		a{
-			&:hover, &:focus, &:active{
-		    	h4{
-					color: $green;
-		    	}
-		    }
-		}
-	}
-	.overbox.list-hover{
-		background: $green;
-		background: rgba(61,184,82, 0.7);
 	}
 }
 
