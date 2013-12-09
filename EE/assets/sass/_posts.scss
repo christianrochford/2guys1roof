@@ -158,6 +158,7 @@
 			float: right;
 			margin-bottom: 20px;
 			position: relative;
+			overflow: hidden;
 			@include breakpoint(desktop){
 				width: 100%;
 			}
@@ -210,14 +211,11 @@
 }
 
 #disqus_thread{
+	@include breakpoint(mobile-landscape){
+		width: 90%;
+		margin: 0 5%; 
+	}
 	iframe{
-		@include breakpoint(mobile-landscape){
-			width: 90%;
-			margin: 0 5%;
-		}
 		margin-top: 20px;
-		@include breakpoint(mobile-landscape){
-			margin: 40px 0 20px; 
-		}
 	}
 }

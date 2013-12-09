@@ -4401,7 +4401,8 @@ html[xmlns] .slides {
     width: 50%;
     float: right;
     margin-bottom: 20px;
-    position: relative; }
+    position: relative;
+    overflow: hidden; }
     @media (max-width: 960px) {
       /* line 156, ../sass/_posts.scss */
       #content #post-wrap #links {
@@ -4411,7 +4412,7 @@ html[xmlns] .slides {
       #content #post-wrap #links {
         margin: 0 5%;
         width: 90%; } }
-    /* line 168, ../sass/_posts.scss */
+    /* line 169, ../sass/_posts.scss */
     #content #post-wrap #links .icon-social {
       color: #47cbcd;
       font-size: 2em;
@@ -4424,38 +4425,34 @@ html[xmlns] .slides {
       -moz-transition: all 300ms ease-in-out;
       -o-transition: all 300ms ease-in-out;
       transition: all 300ms ease-in-out; }
-      /* line 180, ../sass/_posts.scss */
+      /* line 181, ../sass/_posts.scss */
       #content #post-wrap #links .icon-social:hover, #content #post-wrap #links .icon-social:focus, #content #post-wrap #links .icon-social:active {
         cursor: pointer;
         color: #979795; }
 
-/* line 191, ../sass/_posts.scss */
+/* line 192, ../sass/_posts.scss */
 .meals #content #post-wrap .icon-arrow-left {
   color: #3db852; }
-/* line 195, ../sass/_posts.scss */
+/* line 196, ../sass/_posts.scss */
 .meals #content #post-wrap #links .icon-social {
   color: #3db852; }
-/* line 200, ../sass/_posts.scss */
+/* line 201, ../sass/_posts.scss */
 .meals #content #post-wrap .flexslider .flex-direction-nav a {
   color: #3db852;
   color: rgba(61, 184, 82, 0.7); }
-/* line 204, ../sass/_posts.scss */
+/* line 205, ../sass/_posts.scss */
 .meals #content #post-wrap .flexslider .flex-control-paging li a {
   background: #3db852;
   background: rgba(61, 184, 82, 0.7); }
 
-/* line 213, ../sass/_posts.scss */
+@media (max-width: 480px) {
+  /* line 213, ../sass/_posts.scss */
+  #disqus_thread {
+    width: 90%;
+    margin: 0 5%; } }
+/* line 218, ../sass/_posts.scss */
 #disqus_thread iframe {
   margin-top: 20px; }
-  @media (max-width: 480px) {
-    /* line 213, ../sass/_posts.scss */
-    #disqus_thread iframe {
-      width: 90%;
-      margin: 0 5%; } }
-  @media (max-width: 480px) {
-    /* line 213, ../sass/_posts.scss */
-    #disqus_thread iframe {
-      margin: 40px 0 20px; } }
 
 /* line 2, ../sass/_theguys.scss */
 .guys #wrapper {
@@ -4610,7 +4607,7 @@ html[xmlns] .slides {
   width: 0;
   height: 0;
   top: 0;
-  right: 23px;
+  right: 0;
   position: absolute;
   z-index: 0;
   -webkit-transition: all 300ms ease-in-out;

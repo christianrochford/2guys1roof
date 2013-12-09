@@ -40,15 +40,4 @@
 		</div>
 	</div>
 	
-	<script src="{site_url}assets/js/jquery-2.0.3.min.js"></script>
-	<script src="{site_url}assets/js/jquery-migrate-1.2.1.min.js"></script>
-	<script src="{site_url}assets/js/jquery.mixitup.min.js"></script>
-	<script src="{site_url}assets/js/jquery.flexslider.js"></script>
-	<script src="{site_url}assets/js/jquery.fittext.js"></script>
-	<script src="{site_url}assets/js/app.js"></script>
-<script>
-$('#title-wrap h1').fitText();
-</script>
-
-</body>
-</html>
+{embed="base/_footer"}

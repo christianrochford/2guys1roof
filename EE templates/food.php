@@ -2,7 +2,7 @@
 
 <body class="meals">
 
-{embed="base/_food_header"}
+{embed="base/_header"}
 
 <div id="wrapper">
 
@@ -69,17 +69,10 @@
         })();
     	</script>
     	<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    	<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 	{/exp:channel:entries}
 		</div>
 	</div>
 
 </div>
 
-	<script src="{site_url}assets/js/jquery-2.0.3.min.js"></script>
-	<script src="{site_url}assets/js/jquery-migrate-1.2.1.min.js"></script>
-	<script src="{site_url}assets/js/jquery.mixitup.min.js"></script>
-	<script src="{site_url}assets/js/jquery.flexslider.js"></script>
-	<script src="{site_url}assets/js/app.js"></script>
-</body>
-</html>
+{embed="base/_footer"}

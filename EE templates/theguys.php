@@ -2,7 +2,7 @@
 
 <body class="guys">
 
-{embed="base/_guys_header"}
+{embed="base/_header"}
 
 <div id="wrapper">
 {exp:channel:entries channel="the_guys"}
@@ -29,10 +29,4 @@
 {/exp:channel:entries}
 </div>
 
-	<script src="{site_url}assets/js/jquery-2.0.3.min.js"></script>
-	<script src="{site_url}assets/js/jquery.mixitup.min.js"></script>
-	<script src="{site_url}assets/js/jquery.flexslider.js"></script>
-	<script src="{site_url}assets/js/app.js"></script>
-
-</body>
-<html>
+{embed="base/_footer"}

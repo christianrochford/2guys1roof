@@ -2,7 +2,7 @@
 
 <body class="food">
 
-{embed="base/_the_food_header"}
+{embed="base/_header"}
 
 <div id="wrapper" class="clearfix isotope">
 
@@ -17,7 +17,6 @@
 				<div class="overbox">
 					<div class="text-wrap">
 						<a href="{site_url}food/{url_title}" class="post-link" title="{url_title}"><h4>{title}</h4></a>
-						<p>{exp:excerpt limit="50" limit_type="char" indicator="..."}{food_text}{/exp:excerpt}</p>
 					</div>
 					<a class="icon-cutlery post-icon" aria-hidden="true"></a>
 				</div>
@@ -26,10 +25,4 @@
 		</ul>
 	</div>
 
-	<script src="{site_url}assets/js/jquery-2.0.3.min.js"></script>
-	<script src="{site_url}assets/js/jquery-migrate-1.2.1.min.js"></script>
-	<script src="{site_url}assets/js/jquery.isotope.min.js"></script>
-	<script src="{site_url}assets/js/jquery.flexslider.js"></script>
-	<script src="{site_url}assets/js/app.js"></script>
-</body>
-</html>
+{embed="base/_footer"}

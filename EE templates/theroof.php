@@ -2,7 +2,7 @@
 
 <body class="home">
 
-{embed="base/_rooms_header"}
+{embed="base/_header"}
 
 <div id="wrapper">
 
@@ -30,10 +30,4 @@
 		</ul>
 	</div>
 
-	<script src="{site_url}assets/js/jquery-2.0.3.min.js"></script>
-	<script src="{site_url}assets/js/jquery-migrate-1.2.1.min.js"></script>
-	<script src="{site_url}assets/js/jquery.mixitup.min.js"></script>
-	<script src="{site_url}assets/js/jquery.flexslider.js"></script>
-	<script src="{site_url}assets/js/app.js"></script>
-</body>
-</html>
+{embed="base/_footer"}
