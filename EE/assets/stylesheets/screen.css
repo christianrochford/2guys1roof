@@ -4304,153 +4304,177 @@ html[xmlns] .slides {
       height: 100%;
       border: none; }
   /* line 67, ../sass/_posts.scss */
-  #content #post-wrap .flexslider {
+  #content #post-wrap #slider-wrap {
     width: 50%;
-    float: left;
-    overflow: hidden;
-    margin: 0; }
+    float: left; }
     @media (max-width: 960px) {
       /* line 67, ../sass/_posts.scss */
-      #content #post-wrap .flexslider {
+      #content #post-wrap #slider-wrap {
         width: 100%; } }
-    @media (max-width: 480px) {
-      /* line 67, ../sass/_posts.scss */
-      #content #post-wrap .flexslider {
-        margin-bottom: 8px; } }
-    /* line 78, ../sass/_posts.scss */
-    #content #post-wrap .flexslider .slides {
-      width: 100%; }
-      /* line 80, ../sass/_posts.scss */
-      #content #post-wrap .flexslider .slides image {
-        width: 100%; }
-    @media (max-width: 480px) {
-      /* line 84, ../sass/_posts.scss */
-      #content #post-wrap .flexslider .flex-direction-nav a {
-        margin-top: -60px; } }
-    /* line 89, ../sass/_posts.scss */
-    #content #post-wrap .flexslider .flex-control-nav {
-      bottom: 0; }
+    /* line 73, ../sass/_posts.scss */
+    #content #post-wrap #slider-wrap .flexslider {
+      width: 100%;
+      overflow: hidden;
+      margin: 0; }
       @media (max-width: 480px) {
-        /* line 89, ../sass/_posts.scss */
-        #content #post-wrap .flexslider .flex-control-nav {
-          width: 90%; } }
-    @media (max-width: 480px) {
-      /* line 96, ../sass/_posts.scss */
-      #content #post-wrap .flexslider:hover .flex-prev {
-        left: 25px; } }
-    @media (max-width: 480px) {
-      /* line 101, ../sass/_posts.scss */
-      #content #post-wrap .flexslider:hover .flex-next {
-        right: 25px; } }
-  /* line 108, ../sass/_posts.scss */
+        /* line 73, ../sass/_posts.scss */
+        #content #post-wrap #slider-wrap .flexslider {
+          margin-bottom: 8px; } }
+      /* line 80, ../sass/_posts.scss */
+      #content #post-wrap #slider-wrap .flexslider .slides {
+        width: 100%; }
+        /* line 82, ../sass/_posts.scss */
+        #content #post-wrap #slider-wrap .flexslider .slides image {
+          width: 100%; }
+      @media (max-width: 480px) {
+        /* line 86, ../sass/_posts.scss */
+        #content #post-wrap #slider-wrap .flexslider .flex-direction-nav a {
+          margin-top: -60px; } }
+      /* line 91, ../sass/_posts.scss */
+      #content #post-wrap #slider-wrap .flexslider .flex-control-nav {
+        bottom: 0; }
+        @media (max-width: 480px) {
+          /* line 91, ../sass/_posts.scss */
+          #content #post-wrap #slider-wrap .flexslider .flex-control-nav {
+            width: 90%; } }
+      @media (max-width: 480px) {
+        /* line 98, ../sass/_posts.scss */
+        #content #post-wrap #slider-wrap .flexslider:hover .flex-prev {
+          left: 25px; } }
+      @media (max-width: 480px) {
+        /* line 103, ../sass/_posts.scss */
+        #content #post-wrap #slider-wrap .flexslider:hover .flex-next {
+          right: 25px; } }
+    /* line 110, ../sass/_posts.scss */
+    #content #post-wrap #slider-wrap .food-ingredients {
+      color: #979795;
+      margin: 30px 20px 30px; }
+      @media (max-width: 960px) {
+        /* line 110, ../sass/_posts.scss */
+        #content #post-wrap #slider-wrap .food-ingredients {
+          display: none; } }
+  /* line 118, ../sass/_posts.scss */
   #content #post-wrap .post-text-wrap {
     width: 50%;
     float: left;
     margin: 0; }
     @media (max-width: 960px) {
-      /* line 108, ../sass/_posts.scss */
+      /* line 118, ../sass/_posts.scss */
       #content #post-wrap .post-text-wrap {
         width: 100%;
         margin: 0; } }
     @media (max-width: 480px) {
-      /* line 108, ../sass/_posts.scss */
+      /* line 118, ../sass/_posts.scss */
       #content #post-wrap .post-text-wrap {
         margin: 0 5%;
         width: 90%; } }
-    /* line 120, ../sass/_posts.scss */
+    /* line 130, ../sass/_posts.scss */
     #content #post-wrap .post-text-wrap h4 {
       color: #979795;
       text-transform: uppercase;
       text-align: center;
       margin: 10px auto 0 20px; }
       @media (max-width: 960px) {
-        /* line 120, ../sass/_posts.scss */
+        /* line 130, ../sass/_posts.scss */
         #content #post-wrap .post-text-wrap h4 {
           margin: 20px auto; } }
       @media (max-width: 480px) {
-        /* line 120, ../sass/_posts.scss */
+        /* line 130, ../sass/_posts.scss */
         #content #post-wrap .post-text-wrap h4 {
           font-size: 1.5em; } }
-    /* line 132, ../sass/_posts.scss */
+    /* line 142, ../sass/_posts.scss */
     #content #post-wrap .post-text-wrap p {
       width: auto;
       margin: 10px 0 20px 20px;
       color: #979795;
       height: auto; }
       @media (max-width: 960px) {
-        /* line 132, ../sass/_posts.scss */
+        /* line 142, ../sass/_posts.scss */
         #content #post-wrap .post-text-wrap p {
           margin: 0 0 20px 0; } }
-    /* line 141, ../sass/_posts.scss */
+    /* line 151, ../sass/_posts.scss */
     #content #post-wrap .post-text-wrap ol, #content #post-wrap .post-text-wrap ul {
       width: 100%;
       float: left; }
       @media (max-width: 480px) {
-        /* line 141, ../sass/_posts.scss */
+        /* line 151, ../sass/_posts.scss */
         #content #post-wrap .post-text-wrap ol, #content #post-wrap .post-text-wrap ul {
           width: 95%; } }
-      /* line 147, ../sass/_posts.scss */
+      /* line 157, ../sass/_posts.scss */
       #content #post-wrap .post-text-wrap ol li, #content #post-wrap .post-text-wrap ul li {
         color: #979795;
         margin: 10px; }
-    /* line 152, ../sass/_posts.scss */
+    /* line 162, ../sass/_posts.scss */
     #content #post-wrap .post-text-wrap ul {
       margin-left: 20px; }
-  /* line 156, ../sass/_posts.scss */
+    /* line 165, ../sass/_posts.scss */
+    #content #post-wrap .post-text-wrap .food-ingredients {
+      display: none;
+      color: #979795; }
+      @media (max-width: 960px) {
+        /* line 165, ../sass/_posts.scss */
+        #content #post-wrap .post-text-wrap .food-ingredients {
+          display: block;
+          margin-top: 30px; } }
+  /* line 174, ../sass/_posts.scss */
   #content #post-wrap #links {
     width: 50%;
     float: right;
     margin-bottom: 20px;
-    position: relative;
-    overflow: hidden; }
+    overflow: hidden;
+    height: 28px; }
     @media (max-width: 960px) {
-      /* line 156, ../sass/_posts.scss */
+      /* line 174, ../sass/_posts.scss */
       #content #post-wrap #links {
         width: 100%; } }
     @media (max-width: 480px) {
-      /* line 156, ../sass/_posts.scss */
+      /* line 174, ../sass/_posts.scss */
       #content #post-wrap #links {
         margin: 0 5%;
         width: 90%; } }
-    /* line 169, ../sass/_posts.scss */
+    /* line 187, ../sass/_posts.scss */
     #content #post-wrap #links .icon-social {
       color: #47cbcd;
       font-size: 2em;
       font-weight: bold;
-      margin-left: -23px;
+      margin-left: -24px;
       position: absolute;
       left: 100%;
       z-index: 10;
+      overflow: hidden;
       -webkit-transition: all 300ms ease-in-out;
       -moz-transition: all 300ms ease-in-out;
       -o-transition: all 300ms ease-in-out;
       transition: all 300ms ease-in-out; }
-      /* line 181, ../sass/_posts.scss */
+      @media (max-width: 480px) {
+        /* line 187, ../sass/_posts.scss */
+        #content #post-wrap #links .icon-social {
+          margin-left: -48px; } }
+      /* line 203, ../sass/_posts.scss */
       #content #post-wrap #links .icon-social:hover, #content #post-wrap #links .icon-social:focus, #content #post-wrap #links .icon-social:active {
-        cursor: pointer;
-        color: #979795; }
+        cursor: pointer; }
 
-/* line 192, ../sass/_posts.scss */
+/* line 213, ../sass/_posts.scss */
 .meals #content #post-wrap .icon-arrow-left {
   color: #3db852; }
-/* line 196, ../sass/_posts.scss */
+/* line 217, ../sass/_posts.scss */
 .meals #content #post-wrap #links .icon-social {
   color: #3db852; }
-/* line 201, ../sass/_posts.scss */
+/* line 222, ../sass/_posts.scss */
 .meals #content #post-wrap .flexslider .flex-direction-nav a {
   color: #3db852;
   color: rgba(61, 184, 82, 0.7); }
-/* line 205, ../sass/_posts.scss */
+/* line 226, ../sass/_posts.scss */
 .meals #content #post-wrap .flexslider .flex-control-paging li a {
   background: #3db852;
   background: rgba(61, 184, 82, 0.7); }
 
 @media (max-width: 480px) {
-  /* line 213, ../sass/_posts.scss */
+  /* line 234, ../sass/_posts.scss */
   #disqus_thread {
     width: 90%;
     margin: 0 5%; } }
-/* line 218, ../sass/_posts.scss */
+/* line 239, ../sass/_posts.scss */
 #disqus_thread iframe {
   margin-top: 20px; }
 
@@ -4607,7 +4631,7 @@ html[xmlns] .slides {
   width: 0;
   height: 0;
   top: 0;
-  right: 0;
+  right: -150px;
   position: absolute;
   z-index: 0;
   -webkit-transition: all 300ms ease-in-out;
