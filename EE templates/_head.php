@@ -29,6 +29,11 @@
 	<meta name="description" content="DUBLIN 東西 is a home improvements blog, its a gluten free food blog, its a photo journal. Its things we do and things we enjoy in Dublin.">
 {/if}
 	<link rel="stylesheet" href="{site_url}assets/stylesheets/screen.css">
+	<link rel="shortcut icon" href="{site_url}favicon.ico">
+	<link href="apple-touch-icon.png" rel="apple-touch-icon" />
+	<link href="apple-touch-icon-76x76.png" rel="apple-touch-icon" sizes="76x76" />
+	<link href="apple-touch-icon-120x120.png" rel="apple-touch-icon" sizes="120x120" />
+	<link href="apple-touch-icon-152x152.png" rel="apple-touch-icon" sizes="152x152" />
 	<script src="{site_url}assets/js/modernizr.js"></script>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 </head>

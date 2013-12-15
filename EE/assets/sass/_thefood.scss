@@ -38,6 +38,10 @@
 			margin: 0 0 20px 0;
 			width: 100%;
 		}
+		img{
+			filter: opacity(0);
+			opacity: 0;
+		}
 		.overbox{
 			zoom: 1;
 			filter: alpha(opacity=0);
@@ -46,6 +50,7 @@
 			top: 0;
 			left: 0;
 			width: 100%;
+			max-width: 450px;
 			height: 98%;
 			background: $green;
 			background: rgba(61,184,82, 0.7);

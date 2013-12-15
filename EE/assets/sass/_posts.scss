@@ -1,4 +1,5 @@
 #content{
+	width: 100%;
 	float: left;
 	position: relative;
 	z-index: 20;
@@ -85,13 +86,14 @@
 				}
 				.flex-direction-nav a{
 					@include breakpoint(mobile-landscape){
-						margin-top: -60px;
+						display: none;
 					}
 				}
 				.flex-control-nav{
 					bottom: 0;
 					@include breakpoint(mobile-landscape){
 						width: 90%;
+						z-index: 5;
 					}
 				}
 				&:hover{
@@ -107,11 +109,28 @@
 					}
 				}
 			}
-			.food-ingredients{
-				color: $grey;
+			.recipe-details{
 				margin: 30px 20px 30px;
 				@include breakpoint(desktop){
 					display: none;
+				}
+				p{
+					color: $grey;
+					span{
+						font-weight: bold;
+					}
+				}
+				ul{
+					width: 100%;
+					float: left;
+					margin-left: 20px;
+					@include breakpoint(mobile-landscape){
+						width: 95%;
+					}
+					li{
+						color: $grey;
+						margin: 0 10px;
+					}
 				}
 			}
 		}
@@ -151,23 +170,47 @@
 			ol, ul{
 				width: 100%;
 				float: left;
+				margin-left: 30px;
 				@include breakpoint(mobile-landscape){
 					width: 95%;
 				}
 				li{
 					color: $grey;
-					margin: 10px;
+					margin: 0 10px;
+					@include breakpoint(mobile-landscape){
+						margin: 0;
+					}
 				}
 			}
 			ul{
 				margin-left: 20px;
 			}
-			.food-ingredients{
+			.recipe-details{
 				display: none;
-				color: $grey;
 				@include breakpoint(desktop){
 					display: block;
 					margin-top: 30px;
+				}
+				p{
+					color: $grey;
+					span{
+						font-weight: bold;
+					}
+				}
+				ul{
+					width: 100%;
+					float: left;
+					margin-left: 20px;
+					@include breakpoint(mobile-landscape){
+						width: 95%;
+					}
+					li{
+						color: $grey;
+						margin: 0 10px;
+						@include breakpoint(mobile-landscape){
+							margin: 0;
+						}
+					}
 				}
 			}
 		}
@@ -186,6 +229,7 @@
 			}
 			.icon-social{
 				color: $blue;
+				background: #fff;
 				font-size: 2em;
 				font-weight: bold;
 				margin-left: -24px;
@@ -203,6 +247,9 @@
 				&:hover, &:focus, &:active{
 					cursor: pointer;
 				}
+			}
+			.icon-social.on{
+				overflow: visible;
 			}
 		}
 	}

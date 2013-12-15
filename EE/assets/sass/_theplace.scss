@@ -35,6 +35,8 @@
 				margin: 0 2.5% 0;
 			}
 			a{
+				filter: opacity(0);
+				opacity: 0;
 				display: block;
 				position: absolute;
 				top: 0;

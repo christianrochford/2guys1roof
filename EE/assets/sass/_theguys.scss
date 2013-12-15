@@ -14,11 +14,13 @@
 			@include breakpoint(mobile-landscape){
 				height: 200px;
 			}
-			#major{
+			#profile1, #profile2{
+				filter: opacity(0);
+				opacity: 0;
 				background-repeat: none !important;
 				background-position: 50% 50% !important;
 				background-size: cover !important;
-				width: 70%;
+				width: 50%;
 				float: left;
 				height: 400px;
 				-webkit-transition: all 300ms ease-in-out;
@@ -27,22 +29,6 @@
 			    transition: all 300ms ease-in-out;
 				@include breakpoint(mobile-landscape){
 					height: 200px;
-					width: 100% !important;
-				}
-			}
-			#minor-top, #minor-bottom{
-				background-repeat: none !important;
-				background-position: 50% 50% !important;
-				background-size: cover !important;
-				width: 30%;
-				float: left;
-				height: 200px;
-				-webkit-transition: all 300ms ease-in-out;
-			    -moz-transition: all 300ms ease-in-out;
-			    -o-transition: all 300ms ease-in-out;
-			    transition: all 300ms ease-in-out;
-				@include breakpoint(mobile-landscape){
-					display: none;
 				}
 			}
 		}

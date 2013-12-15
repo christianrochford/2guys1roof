@@ -1097,6 +1097,7 @@ $(document).ready(function() {
 $(document).ready(function(){
 	$('.icon-social').on('click',	function(){
 			$('#popup-view').toggleClass('open');
+      $('.icon-social').toggleClass('on');
 		});
 })
 
@@ -1104,8 +1105,8 @@ $(document).ready(function(){
 
 $(window).load(function(){    
   var $container = $('#wrapper'),filters = {};
+  if($('body').hasClass('food')){
   $container.imagesLoaded( function(){
-    if ($("body").hasClass('food')) { 
       $container.isotope({
         itemSelector : '.element',
         // disable resizing
@@ -1123,11 +1124,11 @@ $(window).load(function(){
           }
         });
      });
-     $('.element img').each(function(i) {
-      $(this).delay((i++) * 500).fadeTo(1000, 1); })   
-     }
+     $('#food .element img').delay(500).each(function(i) {
+        $(this).fadeTo(200, 1);
+     })
   });
-
+  }
   // filter buttons
   $('.food .filter a').click(function(){
     var $this = $(this);
@@ -1191,6 +1192,7 @@ $(window).load(function(){
           innerHtml = $('<a>')
             .attr('target', '_blank')
             .attr('href', photo.link)
+            .addClass('instalink')
             .append(innerHtml);
 
           return $('<li class="photo">')
@@ -1214,10 +1216,16 @@ $(window).load(function(){
         });
     });
 
+    $(window).load(function(){  
+      $('.instalink, #major').each(function(i) {
+        $(this).fadeTo(200, 1);
+     })
+      $('#profile1, #profile2').each(function(i) {
+        $(this).fadeTo(200, 1);
+     })
+    });
+
      
-$(window).load(function(){
-$('#wrapper img').each(function(i) {
-  $(this).delay((i++) * 500).fadeTo(1000, 1); })
-});
+
 
 

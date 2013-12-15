@@ -3,6 +3,13 @@
 /////////////*/
 
 @font-face {
+    font-family: 'mandarin';
+    src: url('../fonts/mandarin.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
     font-family: 'bonvenocflight';
     src: url('../fonts/BonvenoCF-Light-webfont.eot');
     src: url('../fonts/BonvenoCF-Light-webfont.eot?#iefix') format('embedded-opentype'),

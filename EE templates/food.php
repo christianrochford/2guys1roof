@@ -6,7 +6,7 @@
 
 <div id="wrapper">
 
-	<div id="content">
+	<div id="content" itemscope itemtype="http://data-vocabulary.org/Recipe">
 		<div id="post-wrap">
 		{exp:channel:entries channel="food"}
 		<a href="{site_url}thefood" class="icon-arrow-left" aria-hidden="true"></a>
@@ -15,19 +15,42 @@
 		<iframe id="player" src="//www.youtube.com/embed/{article_video}?rel=0&autoplay=1&modestbranding=0&showinfo=0&color=#47cbcd" allowfullscreen></iframe>
 		</div>
 		{if:else}
-			<div class="flexslider">
-				<ul class="slides">
-					{exp:channel_images:images entry_id="{entry_id}" limit="20" field="food_images"}
-					<li>
-					<img src="{image:url:large}" alt="{title}" />
-					</li>
-					{/exp:channel_images:images}
-				</ul>
+			<div id="slider-wrap">
+				<div class="flexslider">
+					<ul class="slides">
+						{exp:channel_images:images entry_id="{entry_id}" limit="20" field="food_images"}
+						<li>
+						<img src="{image:url:large}" alt="{title}" itemprop="photo"/>
+						</li>
+						{/exp:channel_images:images}
+					</ul>
+				</div>
+				{if food_ingredients}
+				<div class="recipe-details">
+					<div class="serves"><p itemprop="yield"><span>Serves:</span> {food_serves} people.</p></div>
+					<div class="prep-time"><p><time datetime="PT{food_preparation_time}M" itemprop="prepTime"><span>Preparation Time:</span> {food_preparation_time} min.</time></p></div>
+					<div class="cook-time"><p><time datetime="PT{food_cooking_time}M" itemprop="cookTime"><span>Cooking Time:</span> {food_cooking_time} min.</p></time></div>
+					<time datetime="PT<?php echo "{food_preparation_time}" + "{food_cooking_time}"; ?>M" itemprop="totalTime"></time>
+					<div class="food-ingredients">{food_ingredients}</div>
+				</div>
+				{/if}
 			</div>
 		{/if}
 			<div class="post-text-wrap">
-				<h4>{title}</h4>
-				{food_text}
+				<h4 itemprop="name">{title}</h4>
+				<div id="food-intro" itemprop="summary">{food_text}</div>
+				{if food_ingredients}
+				<div class="recipe-details">
+					<div class="serves"><p itemprop="yield"><span>Serves:</span> {food_serves} people.</p></div>
+					<div class="prep-time"><p><time datetime="PT{food_preparation_time}M" itemprop="prepTime"><span>Preparation Time:</span> {food_preparation_time} min.</time></p></div>
+					<div class="cook-time"><p><time datetime="PT{food_cooking_time}M" itemprop="cookTime"><span>Cooking Time:</span> {food_cooking_time} min.</p></time></div>
+					<time datetime="PT<?php echo "{food_preparation_time}" + "{food_cooking_time}"; ?>M" itemprop="totalTime"></time>
+					<div class="food-ingredients">{food_ingredients}</div>
+				</div>
+				{/if}
+				{if food_instructions}
+				<div id="food-instructions" itemprop="instructions">{food_instructions}</div>
+				{/if}
 			</div>
 			<div id="links">
 				<div class="icon-social" aria-hidden="true">

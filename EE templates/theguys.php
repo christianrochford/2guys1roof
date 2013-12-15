@@ -7,18 +7,13 @@
 <div id="wrapper">
 {exp:channel:entries channel="the_guys"}
 		<div id="image-wrap">
-			<div id="major" style="background: url(
-			{exp:channel_images:images entry_id="{entry_id}" limit="1" field="guys_profile_image"}
-			{image:url:large}
-			{/exp:channel_images:images}
-			);"></div>
-			<div id="minor-top" style="background: url(
-			{exp:channel_images:images entry_id="{entry_id}" limit="1" field="christian_image"}
-			{image:url:large}
-			{/exp:channel_images:images}
-			);"></div>
-			<div id="minor-bottom" style="background: url(
+			<div id="profile1" style="background: url(
 			{exp:channel_images:images entry_id="{entry_id}" limit="1" field="diff_image"}
+			{image:url:large}
+			{/exp:channel_images:images}
+			);"></div>
+			<div id="profile2" style="background: url(
+			{exp:channel_images:images entry_id="{entry_id}" limit="1" field="christian_image"}
 			{image:url:large}
 			{/exp:channel_images:images}
 			);"></div>
