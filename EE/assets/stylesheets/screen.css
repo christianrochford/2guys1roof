@@ -3152,6 +3152,11 @@ a {
   a:hover, a:active, a:focus {
     color: #47cbcd; }
 
+/* line 14, ../sass/_base.scss */
+.chinese {
+  font-family: 'mandarin';
+  font-weight: normal; }
+
 /* line 2, ../sass/_theroof.scss */
 .home, .food, .guys, .place, .posts, .meals {
   color: #f3f3f4;
@@ -4743,17 +4748,13 @@ html[xmlns] .slides {
       text-align: center;
       text-transform: uppercase;
       font-weight: bolder; }
-      /* line 21, ../sass/_intro.scss */
-      .intro #title-page #title-wrap h1 .chinese {
-        font-family: 'mandarin';
-        font-weight: normal; }
-  /* line 27, ../sass/_intro.scss */
+  /* line 23, ../sass/_intro.scss */
   .intro #title-page #arrow-wrap {
     width: 100%;
     position: absolute;
     left: 0;
     bottom: 30px; }
-    /* line 32, ../sass/_intro.scss */
+    /* line 28, ../sass/_intro.scss */
     .intro #title-page #arrow-wrap .icon-arrow-down {
       font-size: 1em;
       color: #fff;
@@ -4766,11 +4767,11 @@ html[xmlns] .slides {
       -moz-transition: all 300ms ease-in-out;
       -o-transition: all 300ms ease-in-out;
       transition: all 300ms ease-in-out; }
-      /* line 44, ../sass/_intro.scss */
+      /* line 40, ../sass/_intro.scss */
       .intro #title-page #arrow-wrap .icon-arrow-down:hover, .intro #title-page #arrow-wrap .icon-arrow-down:focus, .intro #title-page #arrow-wrap .icon-arrow-down:active {
         cursor: pointer;
         color: #fff; }
-/* line 51, ../sass/_intro.scss */
+/* line 47, ../sass/_intro.scss */
 .intro #content {
   background: #fff;
   width: 100%;
@@ -4779,17 +4780,17 @@ html[xmlns] .slides {
   top: 100%;
   left: 0;
   padding: 10px; }
-  /* line 59, ../sass/_intro.scss */
+  /* line 55, ../sass/_intro.scss */
   .intro #content .page-wrap {
     width: 50%;
     height: 50%;
     float: left; }
-    /* line 63, ../sass/_intro.scss */
+    /* line 59, ../sass/_intro.scss */
     .intro #content .page-wrap .page {
       margin: 10px;
       height: 100%;
       position: relative; }
-      /* line 67, ../sass/_intro.scss */
+      /* line 63, ../sass/_intro.scss */
       .intro #content .page-wrap .page .icon-wrap {
         width: 100%;
         height: 100%;
@@ -4797,7 +4798,7 @@ html[xmlns] .slides {
         position: absolute;
         top: 0;
         left: 0; }
-        /* line 74, ../sass/_intro.scss */
+        /* line 70, ../sass/_intro.scss */
         .intro #content .page-wrap .page .icon-wrap a {
           display: table-cell;
           vertical-align: middle;
@@ -4806,43 +4807,43 @@ html[xmlns] .slides {
           color: #fff;
           font-size: 8em; }
           @media (max-width: 480px) {
-            /* line 74, ../sass/_intro.scss */
+            /* line 70, ../sass/_intro.scss */
             .intro #content .page-wrap .page .icon-wrap a {
               font-size: 4em; } }
-          /* line 84, ../sass/_intro.scss */
+          /* line 80, ../sass/_intro.scss */
           .intro #content .page-wrap .page .icon-wrap a span {
             -webkit-transition: all 300ms ease-in-out;
             -moz-transition: all 300ms ease-in-out;
             -o-transition: all 300ms ease-in-out;
             transition: all 300ms ease-in-out; }
-        /* line 91, ../sass/_intro.scss */
+        /* line 87, ../sass/_intro.scss */
         .intro #content .page-wrap .page .icon-wrap .icon-camera {
           font-size: 0.8em; }
           @media (max-width: 480px) {
-            /* line 91, ../sass/_intro.scss */
+            /* line 87, ../sass/_intro.scss */
             .intro #content .page-wrap .page .icon-wrap .icon-camera {
               font-size: 0.7em; } }
-  /* line 100, ../sass/_intro.scss */
+  /* line 96, ../sass/_intro.scss */
   .intro #content #roof {
     background: #47cbcd; }
-    /* line 103, ../sass/_intro.scss */
+    /* line 99, ../sass/_intro.scss */
     .intro #content #roof span:hover, .intro #content #roof span:focus, .intro #content #roof span:active {
       color: #3db852; }
-  /* line 108, ../sass/_intro.scss */
+  /* line 104, ../sass/_intro.scss */
   .intro #content #food {
     background: #3db852; }
-    /* line 111, ../sass/_intro.scss */
+    /* line 107, ../sass/_intro.scss */
     .intro #content #food span:hover, .intro #content #food span:focus, .intro #content #food span:active {
       color: #47cbcd; }
-  /* line 116, ../sass/_intro.scss */
+  /* line 112, ../sass/_intro.scss */
   .intro #content #place {
     background: #ff4252; }
-    /* line 119, ../sass/_intro.scss */
+    /* line 115, ../sass/_intro.scss */
     .intro #content #place span:hover, .intro #content #place span:focus, .intro #content #place span:active {
       color: #c2b647; }
-  /* line 124, ../sass/_intro.scss */
+  /* line 120, ../sass/_intro.scss */
   .intro #content #guys {
     background: #c2b647; }
-    /* line 127, ../sass/_intro.scss */
+    /* line 123, ../sass/_intro.scss */
     .intro #content #guys span:hover, .intro #content #guys span:focus, .intro #content #guys span:active {
       color: #ff4252; }
