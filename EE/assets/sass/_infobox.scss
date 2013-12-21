@@ -1,0 +1,48 @@
+.store {
+  background: $green;
+  color: #fff;
+  font-family: 'bonvenocflight';
+  text-transform: uppercase;
+  padding: 15px;
+  margin: 0;
+  text-shadow: none;
+  width: 250px;
+  position: relative;
+  top: 37px;
+  left: -10px;
+}
+
+.store .title {
+  font-family: 'bonvenocflight';
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 4px;
+  margin-bottom: 8px;
+}
+
+.store .address,
+.store .phone {
+  color: #fff;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: 'bonvenocflight';
+  margin-top: 0.2em;
+  margin-bottom: 0.5em;
+  display: block;
+  text-align: center;
+  line-height: 25px;
+}
+
+.store .web a {
+  color: #fff;
+}
+
+.store .action {
+  font-size: 0.8em;
+  color: #fff;
+  margin-right: 0.5em;
+}
+
+.store a.action.directions {
+  display: none;
+}

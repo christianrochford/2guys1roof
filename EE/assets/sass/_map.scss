@@ -1,0 +1,91 @@
+.meals{
+	h4{
+		text-transform: uppercase;
+		@include breakpoint(mobile-landscape){
+			text-align: center;
+			padding-top: 20px;
+		}
+	}
+	.map-container{
+		width: 100%;
+		height: 600px;
+		overflow: hidden;
+		position: relative;
+		@include breakpoint(mobile-landscape){
+			height: 400px;
+		}
+		#panel{
+				.location-search{
+					#gmap_where{
+						width: 40%;
+						float: left;
+						margin-right: 20px;
+						margin-bottom: 0;
+						@include breakpoint(mobile-landscape){
+							float: none;
+							width: 90%;
+							margin: 0px 5% 20px;
+						}
+					}
+					.button{
+						width: 200px;
+						float: left;
+						height: 32px;
+						background: $green;
+						border: none;
+						filter: opacity(0.6);
+						opacity: 0.6;
+						-webkit-transition: all 300ms ease-in-out;
+					    -moz-transition: all 300ms ease-in-out;
+					    -ms-transition: all 300ms ease-in-out;
+					    -o-transition: all 300ms ease-in-out;
+					    transition: all 300ms ease-in-out;
+					    &:hover, &:focus, &:active{
+					    	filter: opacity(1);
+							opacity: 1;
+					    }
+						@include breakpoint(mobile-landscape){
+							float: none;
+							width: 90%;
+							margin: 20px 5% 0;
+						}
+					}
+				}
+				.storelocator-filter{
+					display: none;
+				}
+				.store-list{
+					display: none;
+				}
+		}
+		#map-canvas{
+			height: 100%;
+			width: 100%;
+			float: left;
+			border-top: 20px solid $green;
+			margin-top: 20px;
+			img {
+				max-width: none;
+			}
+		}
+	}
+
+	#closebutton.icon-close {
+		position: absolute;
+		top: -100px;
+		color: $green;
+		background: transparent;
+	    margin-right: 10px;
+	    font-size: 2em;
+	    border: none;
+	    -webkit-transition: all 300ms ease-in-out;
+	    -moz-transition: all 300ms ease-in-out;
+	    -ms-transition: all 300ms ease-in-out;
+	    -o-transition: all 300ms ease-in-out;
+	    transition: all 300ms ease-in-out;
+	    &:hover, &:focus, &:active{
+	    	cursor: pointer;
+	    	font-size: 2.2em;
+	    }
+	}
+}
