@@ -3900,7 +3900,7 @@ header {
               transform: rotate(180deg);
               -ms-transform: rotate(180deg);
               -webkit-transform: rotate(180deg);
-              margin-top: -4px; }
+              margin-top: 2px; }
             /* line 233, ../sass/_header.scss */
             header #menus nav ul li a:before {
               content: "+";
@@ -5016,3 +5016,8 @@ html[xmlns] .slides {
 /* line 46, ../sass/_infobox.scss */
 .store a.action.directions {
   display: none; }
+
+/* line 50, ../sass/_infobox.scss */
+.store a.action.streetview {
+  float: right;
+  margin-right: 0; }

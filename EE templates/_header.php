@@ -7,6 +7,8 @@
 			<a href="{site_url}"><span class="icon-house" arial-hidden="true"></span></a>
 {if:elseif segment_1 =='thefood'}
 			<a href="{site_url}"><span class="icon-cutlery" arial-hidden="true"></span></a>
+{if:elseif segment_1 =='restaurant-map'}
+			<a href="{site_url}"><span class="icon-cutlery" arial-hidden="true"></span></a>
 {if:elseif segment_1 =='food'}
 			<a href="{site_url}"><span class="icon-cutlery" arial-hidden="true"></span></a>
 {if:elseif segment_1 =='theplace'}
@@ -14,7 +16,7 @@
 {if:else}
 			<a href="{site_url}"><span class="icon-guys" arial-hidden="true"></span></a>
 {/if}		
-			<a href="{site_url}" id="sitename">Dublin東西</a>
+			<a href="{site_url}" id="sitename"><span class="icon-title" aria-hidden="true"></span></a>
 		</div>
 		<div id="menus">
 			<nav>
@@ -40,6 +42,7 @@
 							{exp:channel:categories style="linear" category_group="2"}
 							<li><a href="#filter-{category_url_title}" data-filter-value=".{category_url_title}" class="close">{category_name}</a></li>
 							{/exp:channel:categories}
+							<li><a href="{site_url}restaurant-map">Food Map</a></li>
 						</ul>
 					</li>
 {if:else}
