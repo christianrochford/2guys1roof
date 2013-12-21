@@ -312,11 +312,16 @@ header{
 	header .logo{
 		background: $green;
 	}
-	#menus nav ul li a{
-		&:hover, &:focus, &:active{
-			color: $green;
+	#menus nav ul li{
+		#categories{
+			height: 195px;
 		}
-	}
+		a{
+			&:hover, &:focus, &:active{
+				color: $green;
+			}
+		}
+	} 
 }
 
 .place{

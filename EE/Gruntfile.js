@@ -27,6 +27,7 @@ module.exports = function(grunt) {
         src: ['assets/js/lib/jquery-2.0.3.min.js',
               'assets/js/plugins/*.js',
               'assets/js/app/app.js',
+              'assets/js/app/map.js',
         ],
         // Build Location pulling package name from JSON file
         dest: 'dist/<%= pkg.name %>.js'

@@ -166,6 +166,9 @@
 				@include breakpoint(desktop){
 					margin: 0 0 20px 0; 
 				}
+				a{
+					color: $blue;
+				}
 			}
 			ol, ul{
 				width: 100%;
@@ -273,6 +276,11 @@
 			.flex-control-paging li a {
 				background: $green;
 				background: rgba(61,184,82, 0.7);
+			}
+		}
+		.post-text-wrap p{
+			a{
+				color: green;
 			}
 		}
 	}
